@@ -35,7 +35,7 @@
 	<script src="resources/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 	<style>
-		.home {
+		.main_home {
 			background-image:
 					url("resources/images/background/main_bg.jpg");
 			background-size: 100% 100%;
@@ -45,7 +45,6 @@
 
 
 </head>
-
 <body data-spy="scroll" data-target=".navbar-collapse">
 
 <!--Home page style-->
@@ -88,21 +87,35 @@
 </nav>
 
 <!--Home Sections-->
-<section id="main" class="home bg-mega" ><!-- style="height: 800px;" -->
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="main_home">
-				<div class="home_text">
-					<h1 class="text-white">
-						WE’RE <br> BUSINESS <br> INTELLIGENCE <br>EXPERT!
-					</h1>
+<section id="main" class="home bg-mega"><!-- style="height: 800px;" -->
+	<div class="container-fluid w-100 p-0">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="main_home">
+						<div class="home_text">
+							<h1 class="text-white pl-5">
+								WE’RE <br> BUSINESS <br> INTELIGENCE <br>EXPERT!
+							</h1>
+						</div>
+					</div>
+<!--					<img class="d-block w-100 " src="resources/images/background/main_bg.jpg" alt="Initial slide">-->
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100 " src="resources/images/carousel/001.png" alt="First slide">
+<!--					<img class="d-block w-100" src="resources/images/carousel/001m.png" alt="First slide">-->
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="resources/images/carousel/002.png" alt="Second slide">
+<!--					<img class="d-block w-100" src="resources/images/carousel/002m.png" alt="Second slide">-->
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="resources/images/carousel/003.png" alt="Third slide">
+<!--					<img class="d-block w-100" src="resources/images/carousel/003m.png" alt="Third slide">-->
 				</div>
 			</div>
 		</div>
-		<!--End off row-->
 	</div>
-	<!--End off container -->
 </section>
 <!--End off Home Sections-->
 
@@ -249,37 +262,35 @@
 					<div class="col-md-4">
 						<div class="member_item">
 							<img
-									src="resources/images/business/certi-server.png"
+									src="resources/images/business/tableau-1.png"
 									style="height: 200px; width: 100%; object-fit: contain">
-							<h4 class="m-top-30">Tableau - Server</h4>
+							<h4 class="m-top-30">Tableau Server <br>진단, 업그레이드 및 유지보수</h4>
 							<div class="separator_small"></div>
-							<p>ㆍTableau 서버 모니터링 / 백업 / 성능 확인</p>
-							<p>ㆍ불확실한 상황에 대응 가능한 교육</p>
-							<p style="padding-bottom: 50px;">ㆍ항상 운용 가능한 노하우 전수</p>
+							<p>ㆍ태블로 서버 로그를 기반으로 태블로 서버의 상태를 진단한고, 안정적인 운영을 지원 합니다. </p>
+							<p>ㆍ태블로 서버 장애, 백업, 업그레이드 지원 및 정책 수립하고 안정적인 운영을 보조해 드립니다. (On-Site 지원 프로그램)</p>
+							<p style="padding-bottom: 50px;">ㆍTableau Professional 자격증 보유자가 진행 합니다. (Tableau Server Associate, Tableau Certified Data Analyst)</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="member_item">
 							<img
-									src="resources/images/business/certi-desktop.png"
-									style="height: 200px; width: 100%; object-fit: contain">
-							<h4 class="m-top-30">Education - Desktop</h4>
+									src="resources/images/business/tableau-2.png"
+									style="height: 200px; width: 100%; object-fit: contain;">
+							<h4 class="m-top-30">Tableau Server <br>Architecture 교육 </h4>
 							<div class="separator_small"></div>
-							<p>ㆍTableau Desktop 사용 노하우 전수</p>
-							<p>ㆍ업데이트 되는 최신 내용 교육</p>
-							<p style="padding-bottom: 50px;">ㆍ효율적인 작업 환경 공유</p>
+							<p>ㆍTableau Server의 기업 배포를 설계하고 관리하는 책임 있는 사용자들을 위한 3Days Hand-On 교육(Tableau Server Associate 자격증 준비 가능)</p>
+							<p>ㆍTableau Server Process에 대한 이해와 함께 서버 토폴로지를 설계하고 구성합니다</p>
+							<p style="padding-bottom: 50px;">ㆍ주요 Hand-on 내용(설치, HA 구성, 서버 로그, 백업, 복원, 외부 파일저장소 구성, 외부 레포지토리 구성 등)</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="member_item">
 							<img
-									src="resources/images/business/certi-visualization.jpg"
-									style="height: 200px; width: 100%;">
-							<h4 class="m-top-30">Tableau - Visualization</h4>
+									src="resources/images/business/tableau-3.png"
+									style="height: 200px; width: 100%; object-fit: contain;">
+							<h4 class="m-top-30">Tableau Portal<br>Mobile App</h4>
 							<div class="separator_small"></div>
-							<p>ㆍ데이터 관리와 시각화 노하우 교육</p>
-							<p>ㆍ직관적인 데이터 파악 가능한 노하우</p>
-							<p style="padding-bottom: 50px;">ㆍ데이터를 이용한 의사결정 가능한 제작 방법</p>
+							<p>ㆍ사내 업무용 시스템 및 Mobile App (SSO 연동) 에 태블로를 내장하거나, 태블로를 기업내에서 보다 효율적으로 활용할 수 있도록 관련 Web/Mobile App 제작 혹은 기술지원</p>
 						</div>
 					</div>
 
@@ -1101,13 +1112,7 @@
 				$("#nav-p").css("color", "#6f6f6f");
 				$(".span").css("background-color","#777");
 			}
-
 		});
-
-
-
-
-
 
 		var mapOptions = {
 			center : new naver.maps.LatLng(37.56813, 126.82725),
@@ -1205,6 +1210,11 @@
 	})();
 	ChannelIO('boot', {
 		"pluginKey": "3ee7f217-3e0d-4f24-a886-51e757c2ea69" //please fill with your plugin key
+	});
+	$('#carousel').carousel({
+		interval: 3000,
+		keyboard: false,
+		pause: false,
 	});
 </script>
 <!-- End Channel Plugin -->
