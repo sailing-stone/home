@@ -1,7 +1,9 @@
 import '@/style/global.css';
+import 'pretendard/dist/web/static/pretendard.css';
+import { Router } from '@/page';
 
 const App = () => {
-  return <div>sailingstone</div>;
+  return <Router />;
 };
 
 export default App;

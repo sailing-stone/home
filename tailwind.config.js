@@ -2,7 +2,37 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          main: '#81D8D0',
+          100: '#E4F7F5',
+          200: '#5CCDC2',
+          300: '#3ABEB0',
+          400: '#2F988D',
+          500: '#23726A',
+        },
+      },
+      fontFamily: {
+        sans: [
+          '"Pretendard Variable"',
+          'Pretendard',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'system-ui',
+          'Roboto',
+          '"Helvetica Neue"',
+          '"Segoe UI"',
+          '"Apple SD Gothic Neo"',
+          '"Noto Sans KR"',
+          '"Malgun Gothic"',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          'sans-serif',
+        ],
+      },
+    },
+    plugins: [],
   },
-  plugins: [],
 };
