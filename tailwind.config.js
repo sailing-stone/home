@@ -12,9 +12,16 @@ export default {
           400: '#2F988D',
           500: '#23726A',
         },
+        common: {
+          white: '#FFFFFF',
+          black: '#000000',
+        },
       },
       backgroundColor: {
         header: '#c0c1c3',
+      },
+      backgroundImage: {
+        salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',
       },
       fontFamily: {
         sans: [
