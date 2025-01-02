@@ -13,6 +13,9 @@ export default {
           500: '#23726A',
         },
       },
+      backgroundColor: {
+        header: '#c0c1c3',
+      },
       fontFamily: {
         sans: [
           '"Pretendard Variable"',

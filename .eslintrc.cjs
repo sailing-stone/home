@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true, },
+  env: { browser: true, es2020: true },
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -13,6 +13,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -21,6 +22,7 @@ module.exports = {
     '@typescript-eslint',
     'react-hooks',
     'prettier',
+    'tailwindcss',
   ],
   rules: {
     'react-refresh/only-export-components': 'off',
@@ -76,6 +78,7 @@ module.exports = {
         },
       },
     ],
+    'tailwindcss/classnames-order': 'warn',
   },
   parserOptions: {
     ecmaVersion: 'latest',
