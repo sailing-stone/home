@@ -17,9 +17,13 @@ export default {
           white: '#FFFFFF',
           black: '#000000',
         },
+        text: {
+          footer: '#8E8E8E',
+        },
       },
       backgroundColor: {
         header: '#c0c1c3',
+        footer: '#0B132B',
       },
       backgroundImage: {
         salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',
