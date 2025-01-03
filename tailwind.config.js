@@ -11,6 +11,7 @@ export default {
           300: '#3ABEB0',
           400: '#2F988D',
           500: '#23726A',
+          600: '#7DC3C4',
         },
         common: {
           white: '#FFFFFF',
@@ -19,10 +20,10 @@ export default {
       },
       backgroundColor: {
         header: '#c0c1c3',
-        enterprisePartner: '#EEEEEE',
       },
       backgroundImage: {
         salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',
+        contact: 'linear-gradient(90deg, #81D8D0, #6fd4de)',
       },
       fontFamily: {
         sans: [

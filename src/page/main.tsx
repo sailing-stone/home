@@ -1,3 +1,4 @@
+import ContactSection from '@/component/common/contact-section';
 import Banner from '@/component/main/banner';
 import EnterprisePartner from '@/component/main/enterprise-partner';
 import Intro from '@/component/main/intro';
@@ -10,6 +11,7 @@ const MainPage = () => {
       <ServicePartner />
       <Intro />
       <EnterprisePartner />
+      <ContactSection />
     </div>
   );
 };
