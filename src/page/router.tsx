@@ -8,6 +8,10 @@ const Router = () => {
         path='/'
         element={<Pages.MainPage />}
       />
+      <Route
+        path='/service'
+        element={<Pages.ServicePage />}
+      />
     </Routes>
   );
 };

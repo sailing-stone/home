@@ -7,7 +7,7 @@ interface Props {
 
 const NavigationItem = ({ href, text }: Props) => {
   return (
-    <li>
+    <li className='shrink-0'>
       <Link to={href}>{text}</Link>
     </li>
   );

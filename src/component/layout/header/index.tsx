@@ -15,7 +15,7 @@ const Header = () => {
       <section
         className={twJoin(
           'px-40 flex items-center justify-between transition-height duration-300 ease-in-out absolute left-0 top-28 h-[31.4rem] w-full bg-common-white overflow-y-hidden',
-          isToggle ? 'h-[31.4rem]' : 'h-0',
+          isToggle ? 'h-[35rem]' : 'h-0',
         )}
       >
         <Space className='w-[10.5rem]' />

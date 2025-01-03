@@ -16,7 +16,7 @@ const GlobalNavigation = ({ onClick }: Props) => {
     <nav className='relative flex gap-60 text-[1.8rem] font-medium'>
       <button
         type='button'
-        className='flex items-center'
+        className='flex shrink-0 items-center'
         onClick={onClick}
       >
         서비스
@@ -24,7 +24,7 @@ const GlobalNavigation = ({ onClick }: Props) => {
       </button>
       <button
         type='button'
-        className='flex items-center'
+        className='flex shrink-0 items-center'
         onClick={onClick}
       >
         솔루션
