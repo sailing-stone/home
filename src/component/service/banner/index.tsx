@@ -9,10 +9,9 @@ const Banner = () => {
         src='/image/service/service-banner.png'
         alt='메인 페이지 배너'
         lazy={false}
-        className='max-h-[72rem]'
         objectFit='cover'
       />
-      <div className='absolute bottom-20 left-32 flex flex-col gap-12 text-common-white'>
+      <div className='absolute bottom-20 flex flex-col gap-12 px-40 text-common-white'>
         <div>
           <p className='text-[3rem] font-medium'>서비스</p>
           <h1 className='text-[8rem] font-bold'>
