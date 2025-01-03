@@ -7,12 +7,17 @@ const GNB_LIST = [
   { id: 3, href: '/', text: '문의하기' },
 ];
 
-const GlobalNavigation = () => {
+interface Props {
+  onClick: () => void;
+}
+
+const GlobalNavigation = ({ onClick }: Props) => {
   return (
-    <nav className='flex gap-60 text-[1.8rem] font-medium'>
+    <nav className='relative flex gap-60 text-[1.8rem] font-medium'>
       <button
         type='button'
         className='flex items-center'
+        onClick={onClick}
       >
         서비스
         <DownIcon />
@@ -20,6 +25,7 @@ const GlobalNavigation = () => {
       <button
         type='button'
         className='flex items-center'
+        onClick={onClick}
       >
         솔루션
         <DownIcon />
