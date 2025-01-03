@@ -19,6 +19,7 @@ export default {
       },
       backgroundColor: {
         header: '#c0c1c3',
+        enterprisePartner: '#EEEEEE',
       },
       backgroundImage: {
         salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',

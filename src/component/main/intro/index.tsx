@@ -6,7 +6,7 @@ const Intro = () => {
       <Image
         width='48.5rem'
         height='72.7rem'
-        src='/image/main-intro.png'
+        src='/image/main/main-intro.png'
         alt='인트로'
       />
       <div className='flex flex-col gap-20 text-common-black'>

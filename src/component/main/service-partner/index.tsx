@@ -6,10 +6,10 @@ const ServicePartner = () => {
       <Image
         width='19rem'
         height='18.7rem'
-        src='/image/saleforce-partner.png'
+        src='/image/main/saleforce-partner.png'
         alt='salesforce 로고'
       />
-      <div className='flex flex-col items-center text-common-white'>
+      <div className='text-center text-common-white'>
         <h3 className='text-[4rem] font-bold'>
           Salesforce 공식 서비스 파트너사
         </h3>
