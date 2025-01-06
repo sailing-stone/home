@@ -3,7 +3,10 @@ import ConsultingCardList from './consulting-card-list';
 
 const BIConsulting = () => {
   return (
-    <section className='mt-40 flex flex-col items-center justify-center'>
+    <section
+      id='BI 컨설팅'
+      className='mt-40 flex flex-col items-center justify-center'
+    >
       <Badge>
         <h1 className='text-[7rem] font-bold'>BI 컨설팅</h1>
       </Badge>

@@ -2,7 +2,10 @@ import Badge from '@/component/base/badge';
 
 const AIService = () => {
   return (
-    <section className='flex flex-col items-center px-40 py-[25rem]'>
+    <section
+      id='태블로 생성형 AI 기반 BI 서비스'
+      className='flex flex-col items-center px-40 py-[25rem]'
+    >
       <Badge>
         <h1 className='text-[7rem] font-bold text-common-black'>
           생성형 AI 기반 BI 서비스

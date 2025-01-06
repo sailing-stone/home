@@ -4,7 +4,10 @@ import EducationPointList from './education-point-list';
 
 const BIEducation = () => {
   return (
-    <section className='flex flex-col items-center justify-center px-40 py-60'>
+    <section
+      id='Self-BI 교육 지원'
+      className='flex flex-col items-center justify-center px-40 py-60'
+    >
       <Badge>
         <h1 className='text-[7rem] font-bold'>Self BI 교육 지원</h1>
       </Badge>

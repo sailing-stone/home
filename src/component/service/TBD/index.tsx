@@ -4,7 +4,10 @@ import TBDInfoList from './TBD-info-list';
 
 const TBD = () => {
   return (
-    <section className='flex flex-col items-center justify-center bg-contrast-200 py-60'>
+    <section
+      id='Tableau Expertise 서비스'
+      className='flex flex-col items-center justify-center bg-contrast-200 py-60'
+    >
       <Badge>
         <h1 className='text-[7rem] font-bold text-common-white'>
           WEB / MOBILE APP (TBD)
