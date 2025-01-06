@@ -5,7 +5,7 @@ import URL from '@/constant/url';
 const GNB_LIST = [
   { id: 1, href: URL.SOLUTION, text: '회사 소개' },
   { id: 2, href: URL.RECRUIT, text: '리쿠르트' },
-  { id: 3, href: URL.CONTACT, text: '문의하기' },
+  { id: 3, href: URL.CONTACT, text: '문의' },
 ];
 
 interface Props {
@@ -14,7 +14,7 @@ interface Props {
 
 const GlobalNavigation = ({ onClick }: Props) => {
   return (
-    <nav className='relative flex gap-60 text-[1.8rem] font-medium'>
+    <nav className='relative flex gap-60 text-[1.8rem] font-medium leading-[2.1rem]'>
       <button
         type='button'
         className='flex shrink-0 items-center'

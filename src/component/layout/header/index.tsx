@@ -21,9 +21,9 @@ const Header = () => {
         <Space className='w-[10.5rem]' />
         <div className='flex gap-60'>
           <LocalNavigation />
-          <Space className='w-[6.6rem]' />
-          <Space className='w-[6.2rem]' />
-          <Space className='w-[6.2rem]' />
+          <Space className='w-[6.7rem]' />
+          <Space className='w-[6.3rem]' />
+          <Space className='w-[3.2em]' />
         </div>
       </section>
     </header>

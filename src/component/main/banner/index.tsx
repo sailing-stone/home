@@ -1,17 +1,9 @@
-import Image from '@/component/base/Image';
-
 const Banner = () => {
   return (
-    <section>
-      <Image
-        width='100%'
-        height='auto'
-        src='/image/main/main-banner.png'
-        alt='메인 페이지 배너'
-        lazy={false}
-        objectFit='cover'
-      />
-    </section>
+    <section
+      className='aspect-[16/9] max-h-[108.1rem] w-full bg-cover bg-center bg-no-repeat'
+      style={{ backgroundImage: "url('/image/main/main-banner.png')" }}
+    />
   );
 };
 
