@@ -9,9 +9,7 @@ const TBD = () => {
       className='flex flex-col items-center justify-center bg-contrast-200 py-60'
     >
       <Badge>
-        <h1 className='text-[7rem] font-bold text-common-white'>
-          WEB / MOBILE APP (TBD)
-        </h1>
+        <h1 className='section-h1 text-common-white'>WEB / MOBILE APP (TBD)</h1>
       </Badge>
       <small className='text-[2rem] font-normal text-common-white'>
         Tableau의 잠재력을 극대화하는 확장 솔루션

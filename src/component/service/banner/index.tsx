@@ -14,9 +14,7 @@ const Banner = () => {
       <div className='absolute bottom-20 flex flex-col gap-12 px-40 text-common-white'>
         <div>
           <p className='text-[3rem] font-medium'>서비스</p>
-          <h1 className='text-[8rem] font-bold'>
-            Tableau와 함께하는 데이터 혁신
-          </h1>
+          <h1 className='banner-h1'>Tableau와 함께하는 데이터 혁신</h1>
         </div>
         <div className='text-[2rem] font-light'>
           <p>

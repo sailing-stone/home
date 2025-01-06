@@ -12,7 +12,7 @@ const Banner = () => {
         objectFit='cover'
       />
       <div className='absolute bottom-20 flex flex-col gap-12 px-40 text-common-white'>
-        <h1 className='text-[8rem] font-bold'>리쿠르트 (인재 모집... TBD)</h1>
+        <h1 className='banner-h1'>리쿠르트 (인재 모집... TBD)</h1>
         <p className='text-[2rem] font-light'>
           Lorem ipsum dolor sit amet consectetur. Pharetra volutpat amet libero
           sem viverra eget tempor in non. Egestas purus eget tellus augue

@@ -16,3 +16,13 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@layer components {
+  .banner-h1 {
+    @apply text-[8rem] font-bold leading-[9.5rem] text-common-white;
+  }
+
+  .section-h1 {
+    @apply text-[7rem] font-bold leading-[8.3rem] text-common-black;
+  }
+}

@@ -9,7 +9,7 @@ const BIEducation = () => {
       className='flex flex-col items-center justify-center px-40 py-60'
     >
       <Badge>
-        <h1 className='text-[7rem] font-bold'>Self BI 교육 지원</h1>
+        <h1 className='section-h1'>Self BI 교육 지원</h1>
       </Badge>
       <p className='text-[2rem] font-normal'>
         Tableau에 대한 깊은 이해와 활용 능력을 높이는 맞춤형 교육 프로그램을

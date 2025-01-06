@@ -8,7 +8,7 @@ const BIConsulting = () => {
       className='mt-40 flex flex-col items-center justify-center'
     >
       <Badge>
-        <h1 className='text-[7rem] font-bold'>BI 컨설팅</h1>
+        <h1 className='section-h1'>BI 컨설팅</h1>
       </Badge>
       <p className='text-[2rem] font-normal'>
         세일링 스톤은 데이터 분석과 시각화 경험을 바탕으로 고객의 비즈니스

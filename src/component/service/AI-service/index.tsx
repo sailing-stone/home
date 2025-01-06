@@ -7,9 +7,7 @@ const AIService = () => {
       className='flex flex-col items-center px-40 py-[25rem]'
     >
       <Badge>
-        <h1 className='text-[7rem] font-bold text-common-black'>
-          생성형 AI 기반 BI 서비스
-        </h1>
+        <h1 className='section-h1'>생성형 AI 기반 BI 서비스</h1>
       </Badge>
       <small className='text-[2rem] font-normal text-common-black'>
         기업 데이터를 활용한 분석 및 인사이트 생성을 자동화하여 비즈니스
