@@ -19,6 +19,10 @@ export default {
         },
         text: {
           footer: '#8E8E8E',
+          underline: '#0B132B',
+        },
+        border: {
+          education: '#A3A3A3',
         },
       },
       backgroundColor: {

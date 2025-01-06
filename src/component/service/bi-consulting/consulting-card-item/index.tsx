@@ -25,7 +25,7 @@ const ConsultingCardItem = ({ src, title, description, className }: Props) => {
           lazy={false}
         />
         <div className='absolute bottom-20 px-12'>
-          <h3 className='text-[3rem] font-bold'>{title}</h3>;
+          <h3 className='text-[3rem] font-bold'>{title}</h3>
           <p className='text-[1.8rem] font-medium'>{description}</p>
         </div>
       </div>
