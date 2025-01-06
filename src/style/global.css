@@ -22,7 +22,13 @@ body {
     @apply text-[8rem] font-bold leading-[9.5rem] text-common-white;
   }
 
+  .section-wrap {
+    @apply flex flex-col items-center justify-center gap-12 px-20 py-80;
+  }
   .section-h1 {
     @apply text-[7rem] font-bold leading-[8.3rem] text-common-black;
+  }
+  .section-small {
+    @apply text-[2rem] font-normal leading-[3rem] text-common-black;
   }
 }
