@@ -3,6 +3,7 @@ import Banner from '@/component/service/banner';
 import BIConsulting from '@/component/service/bi-consulting';
 import BIEducation from '@/component/service/bi-education';
 import LocalNavigation from '@/component/service/local-navigation';
+import TBD from '@/component/service/TBD';
 
 const ServicePage = () => {
   return (
@@ -11,6 +12,7 @@ const ServicePage = () => {
       <LocalNavigation />
       <BIConsulting />
       <BIEducation />
+      <TBD />
       <ContactSection />
     </div>
   );

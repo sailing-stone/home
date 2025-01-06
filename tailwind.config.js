@@ -20,6 +20,7 @@ export default {
         text: {
           footer: '#8E8E8E',
           underline: '#0B132B',
+          highlight: '#F9C002',
         },
         border: {
           education: '#A3A3A3',
@@ -27,7 +28,9 @@ export default {
       },
       backgroundColor: {
         header: '#c0c1c3',
-        footer: '#0B132B',
+        contrast: {
+          200: '#0B132B',
+        },
         consulting: '#212D40',
       },
       backgroundImage: {
