@@ -36,7 +36,7 @@ export default {
       backgroundImage: {
         salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',
         contact: 'linear-gradient(90deg, #81D8D0, #6fd4de)',
-        coreValue: 'linear-gradient(90deg, #B8E9E4, #81D8D0)',
+        coreValue: 'linear-gradient(140deg, #B8E9E4 20%, #81D8D0 50%)',
       },
       fontFamily: {
         sans: [
