@@ -1,10 +1,11 @@
 import DownIcon from '@/component/common/icon/down-icon';
 import NavigationList from '@/component/common/navigation-list';
+import URL from '@/constant/url';
 
 const GNB_LIST = [
-  { id: 1, href: '/', text: '회사 소개' },
-  { id: 2, href: '/', text: '리쿠르트' },
-  { id: 3, href: '/', text: '문의하기' },
+  { id: 1, href: URL.SOLUTION, text: '회사 소개' },
+  { id: 2, href: URL.RECRUIT, text: '리쿠르트' },
+  { id: 3, href: URL.CONTACT, text: '문의하기' },
 ];
 
 interface Props {

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import NavigationList from '@/component/common/navigation-list';
+import URL from '@/constant/url';
 
 const SERVICE_NAVIGATION_LIST = [
-  { id: 1, text: 'BI 컨설팅', href: '/service' },
-  { id: 2, text: 'Self-BI 교육 지원', href: '/service' },
-  { id: 3, text: 'Tableau Expertise 서비스', href: '/service' },
-  { id: 4, text: '태블로 생성형 AI 기반 BI 서비스', href: '/service' },
+  { id: 1, text: 'BI 컨설팅', href: URL.SERVICE },
+  { id: 2, text: 'Self-BI 교육 지원', href: URL.SERVICE },
+  { id: 3, text: 'Tableau Expertise 서비스', href: URL.SERVICE },
+  { id: 4, text: '태블로 생성형 AI 기반 BI 서비스', href: URL.SERVICE },
 ];
 
 const LocalNavigation = () => {
