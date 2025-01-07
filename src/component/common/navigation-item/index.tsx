@@ -16,8 +16,9 @@ const NavigationItem = ({ href, text, isActive, onNavigate }: Props) => {
   };
 
   const className = twJoin(
-    'shrink-0',
-    isActive && 'text-primary-main underline',
+    'shrink-0 leading-[2.1rem]',
+    isActive &&
+      'text-primary-main underline font-bold underline-offset-8 decoration-2',
   );
 
   return (

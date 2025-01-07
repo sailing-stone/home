@@ -6,12 +6,12 @@ const BIEducation = () => {
   return (
     <section
       id='Self-BI 교육 지원'
-      className='flex flex-col items-center justify-center px-40 py-60'
+      className='flex flex-col items-center justify-center pb-[26.6rem] pt-[10.7rem]'
     >
       <Badge>
-        <h1 className='section-h1'>Self BI 교육 지원</h1>
+        <h1 className='section-title'>Self BI 교육 지원</h1>
       </Badge>
-      <p className='text-[2rem] font-normal'>
+      <p className='section-description'>
         Tableau에 대한 깊은 이해와 활용 능력을 높이는 맞춤형 교육 프로그램을
         제공합니다.
       </p>
@@ -21,9 +21,8 @@ const BIEducation = () => {
         height='34.4rem'
         src='image/service/polygon.png'
         alt='아래 방향 삼각형'
-        className='m-12'
       />
-      <div className='flex gap-60 text-center text-[3.5rem] font-bold text-text-underline underline'>
+      <div className='mt-[10.7rem] flex gap-[15.8rem]  text-center text-[3.5rem] font-bold leading-[6.5rem] text-text-underline underline'>
         <p className='w-[26.7rem]'>
           조직 내 데이터 문화
           <br />

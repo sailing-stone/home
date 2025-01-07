@@ -1,5 +1,4 @@
 import { twMerge } from 'tailwind-merge';
-import Image from '@/component/base/Image';
 
 interface Props {
   src: string;
@@ -12,22 +11,18 @@ const ConsultingCardItem = ({ src, title, description, className }: Props) => {
   return (
     <li
       className={twMerge(
-        'relative text-common-white flex flex-col justify-start',
+        'text-common-white flex flex-col justify-start relative',
         className,
       )}
     >
-      <div className='relative'>
-        <Image
-          width='57rem'
-          height='74rem'
-          src={src}
-          alt={title}
-          lazy={false}
-        />
-        <div className='absolute bottom-20 px-12'>
-          <h3 className='text-[3rem] font-bold'>{title}</h3>
-          <p className='text-[1.8rem] font-medium'>{description}</p>
-        </div>
+      <div
+        className='flex h-[74.1rem] max-w-[57.2rem] flex-col justify-end gap-[1.6rem] rounded-[3rem] bg-cover bg-center bg-no-repeat px-[3.9rem] py-[6.2rem]'
+        style={{
+          backgroundImage: `url(${src})`,
+        }}
+      >
+        <h3 className='text-[3rem] font-bold'>{title}</h3>
+        <p className='text-[1.8rem] font-medium'>{description}</p>
       </div>
     </li>
   );

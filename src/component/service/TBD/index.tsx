@@ -6,23 +6,25 @@ const TBD = () => {
   return (
     <section
       id='Tableau Expertise 서비스'
-      className='flex flex-col items-center justify-center bg-contrast-200 py-60'
+      className='flex flex-col items-center justify-center bg-contrast-200 pb-[20.9rem] pt-[18.7rem]'
     >
       <Badge>
-        <h1 className='section-h1 text-common-white'>WEB / MOBILE APP (TBD)</h1>
+        <h1 className='section-title text-common-white'>
+          WEB / MOBILE APP (TBD)
+        </h1>
       </Badge>
-      <small className='text-[2rem] font-normal text-common-white'>
+      <p className='section-description text-common-white'>
         Tableau의 잠재력을 극대화하는 확장 솔루션
-      </small>
-      <div className='mt-40 flex w-[116rem] items-center justify-center gap-40'>
-        <div className='flex shrink-0 flex-col items-end gap-20 pl-20'>
+      </p>
+      <div className='mt-[10.3rem] flex items-center justify-center gap-[7.4rem]'>
+        <div className='flex basis-[49%] flex-col items-end gap-[4.9rem] py-[4.3rem]'>
           <Image
             width='32.2rem'
             height='7.8rem'
             src='image/service/tableau-qualifications.png'
             alt='태블로 자격증들'
           />
-          <p className='text-end text-[4rem] font-light text-common-white'>
+          <p className='text-end text-[4rem] font-light leading-[6rem] text-common-white'>
             <span className='font-bold text-text-highlight'>
               Tableau 공식자격증
             </span>

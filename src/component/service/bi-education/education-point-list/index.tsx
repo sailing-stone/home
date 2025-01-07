@@ -51,9 +51,10 @@ const EDUCATION_POINT_LIST = [
     ),
   },
 ];
+
 const EducationPointList = () => {
   return (
-    <ul className='my-20 flex gap-20 rounded-[20rem] border-2 border-primary-main p-12'>
+    <ul className='my-[6.2rem] flex gap-[4.2rem] rounded-[20rem] border-2 border-primary-main p-12'>
       {EDUCATION_POINT_LIST.map(({ id, title, description }, index) => (
         <EducationPointItem
           key={id}

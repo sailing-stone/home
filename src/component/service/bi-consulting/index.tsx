@@ -5,17 +5,17 @@ const BIConsulting = () => {
   return (
     <section
       id='BI 컨설팅'
-      className='mt-40 flex flex-col items-center justify-center'
+      className='flex flex-col items-center justify-center pt-[13.3rem]'
     >
       <Badge>
-        <h1 className='section-h1'>BI 컨설팅</h1>
+        <h1 className='section-title'>BI 컨설팅</h1>
       </Badge>
-      <p className='text-[2rem] font-normal'>
+      <p className='section-description'>
         세일링 스톤은 데이터 분석과 시각화 경험을 바탕으로 고객의 비즈니스
         요구에 맞는 전략적 Tableau 컨설팅을 제공합니다.
       </p>
       <ConsultingCardList />
-      <div className='flex h-[31.2rem] w-full items-center justify-center bg-consulting'>
+      <div className='flex w-full justify-center bg-consulting py-[11.4rem]'>
         <p className='text-center text-[3.5rem] font-medium'>
           고객의
           <span className='ml-4 font-extrabold text-primary-main'>

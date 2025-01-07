@@ -1,17 +1,10 @@
-import Image from '@/component/base/Image';
-
 const Banner = () => {
   return (
-    <section className='relative -z-10'>
-      <Image
-        width='100%'
-        height='auto'
-        src='/image/service/service-banner.png'
-        alt='메인 페이지 배너'
-        lazy={false}
-        objectFit='cover'
-      />
-      <div className='absolute bottom-20 flex flex-col gap-12 px-40 text-common-white'>
+    <section
+      className='flex aspect-[16/9] max-h-[108.1rem] w-full items-end bg-cover bg-center bg-no-repeat px-40 py-[6.4rem] text-common-white'
+      style={{ backgroundImage: "url('/image/service/service-banner.png')" }}
+    >
+      <div className='flex flex-col gap-[4.5rem]'>
         <div>
           <p className='text-[3rem] font-medium'>서비스</p>
           <h1 className='banner-h1'>Tableau와 함께하는 데이터 혁신</h1>

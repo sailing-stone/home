@@ -33,7 +33,7 @@ const CONSULTING_LIST = [
 
 const ConsultingCardList = () => {
   return (
-    <ul className='grid grid-cols-2 gap-12 py-40'>
+    <ul className='grid grid-cols-2 gap-[2.2rem] pb-[9.7rem] pt-[12.4rem]'>
       {CONSULTING_LIST.map(({ id, src, title, description }, index) => (
         <ConsultingCardItem
           key={id}

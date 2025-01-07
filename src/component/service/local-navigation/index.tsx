@@ -22,7 +22,7 @@ const LocalNavigation = () => {
     <NavigationList
       list={SERVICE_NAVIGATION_LIST}
       activeText={activeText}
-      className='gap-12 px-40 py-12 text-[1.8rem] font-medium'
+      className='gap-12 px-40 py-10 text-[1.8rem] font-medium'
       onNavigate={onNavigate}
     />
   );

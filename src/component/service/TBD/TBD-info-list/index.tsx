@@ -23,7 +23,7 @@ const TBD_INFO_LIST = [
 
 const TBDInfoList = () => {
   return (
-    <ul className='flex flex-col gap-20'>
+    <ul className='flex basis-[49%] flex-col gap-16'>
       {TBD_INFO_LIST.map(({ id, title, description }) => (
         <TBDInfoItem
           key={id}
