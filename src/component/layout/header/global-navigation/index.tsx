@@ -31,7 +31,10 @@ const GlobalNavigation = ({ onClick }: Props) => {
         솔루션
         <DownIcon />
       </button>
-      <NavigationList list={GNB_LIST} />
+      <NavigationList
+        type='GNB'
+        list={GNB_LIST}
+      />
     </nav>
   );
 };
