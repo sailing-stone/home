@@ -8,6 +8,7 @@ const Intro = () => {
         height='72.7rem'
         src='/image/main/main-intro.png'
         alt='인트로'
+        lazy={false}
       />
       <div className='flex flex-col gap-[3.3rem] text-common-black'>
         <h3 className='text-[4rem] font-extrabold'>WITH SAILING STONE.</h3>

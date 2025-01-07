@@ -8,7 +8,7 @@ interface Props {
 
 const EducationPointItem = ({ index, title, description }: Props) => {
   return (
-    <li className='flex size-[36rem] flex-col items-center gap-12 rounded-full border border-dotted border-border-education px-14 py-[5.9rem]'>
+    <li className='flex size-[36rem] flex-col items-center gap-12 rounded-[50%] border border-dotted border-border-education px-14 py-[5.9rem]'>
       <div className='flex flex-col items-center gap-[0.8rem]'>
         <p className='text-[2rem] font-black leading-[2.3rem] text-primary-main'>
           Point {index}.

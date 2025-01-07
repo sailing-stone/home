@@ -1,3 +1,4 @@
+import AIPortal from '@/component/solution/AI-portal';
 import Banner from '@/component/solution/banner';
 import LocalNavigation from '@/component/solution/local-navigation';
 
@@ -6,6 +7,7 @@ const SolutionPage = () => {
     <div>
       <Banner />
       <LocalNavigation />
+      <AIPortal />
     </div>
   );
 };

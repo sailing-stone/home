@@ -26,7 +26,7 @@ interface Props {
 }
 
 const LocalNavigation = ({ onNavigate }: Props) => {
-  const [activeText, setActiveText] = useState(SERVICE_NAVIGATION_LIST[0].text);
+  const [activeText, setActiveText] = useState('');
 
   const handleOnNavigate = (text: string) => {
     onNavigate();
@@ -41,7 +41,7 @@ const LocalNavigation = ({ onNavigate }: Props) => {
         list={SERVICE_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={activeText}
-        onNavigate={onNavigate}
+        onNavigate={handleOnNavigate}
       />
       <NavigationList
         list={SOLUTION_NAVIGATION_LIST}
