@@ -17,6 +17,10 @@ const Router = () => {
         path={URL.RECRUIT}
         element={<Pages.RecruitPage />}
       />
+      <Route
+        path={URL.CONTACT}
+        element={<Pages.ContactPage />}
+      />
     </Routes>
   );
 };

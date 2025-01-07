@@ -31,12 +31,17 @@ export default {
         contrast: {
           200: '#0B132B',
         },
+        input: '#EEEEEE',
+        submit: '#212D40',
         consulting: '#212D40',
       },
       backgroundImage: {
         salesforce: 'linear-gradient(90deg, #212C63, #1F346B, #009DDC)',
         contact: 'linear-gradient(90deg, #81D8D0, #6fd4de)',
         coreValue: 'linear-gradient(140deg, #B8E9E4 20%, #81D8D0 50%)',
+      },
+      boxShadow: {
+        button: '0 4px 10px rgba(0, 0, 0, 0.25)',
       },
       fontFamily: {
         sans: [
