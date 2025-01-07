@@ -3,14 +3,14 @@ import CoreValueList from './core-value-list';
 
 const CoreValue = () => {
   return (
-    <section className='flex flex-col items-center justify-center py-40'>
+    <section className='flex flex-col items-center justify-center pb-[35.5rem] pt-[16.1rem]'>
       <Badge>
-        <h1 className='section-h1'>핵심 가치</h1>
+        <h1 className='section-title'>핵심 가치</h1>
       </Badge>
-      <small className='text-[2rem] font-normal'>
+      <p className='section-description'>
         Invite shadow community opacity variant. Outline blur subtract content
         ellipse.
-      </small>
+      </p>
       <CoreValueList />
     </section>
   );

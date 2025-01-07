@@ -3,14 +3,14 @@ import WelfareBenefitsList from './welfare-benefits-list';
 
 const WelfareBenefits = () => {
   return (
-    <section className='flex flex-col items-center justify-center gap-12'>
+    <section className='flex flex-col items-center justify-center gap-12 pb-[24.5rem]'>
       <Badge>
-        <h1 className='section-h1'>복리후생</h1>
+        <h1 className='section-title'>복리후생</h1>
       </Badge>
-      <small className='section-small'>
+      <p className='section-description'>
         Invite shadow community opacity variant. Outline blur subtract content
         ellipse.
-      </small>
+      </p>
       <WelfareBenefitsList />
     </section>
   );
