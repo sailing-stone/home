@@ -10,9 +10,11 @@ interface Props {
 
 const NavigationItem = ({ href, text, isActive, onNavigate }: Props) => {
   const handleNavigate = () => {
-    if (onNavigate) {
-      onNavigate(text);
-    }
+    setTimeout(() => {
+      if (onNavigate) {
+        onNavigate(text);
+      }
+    }, 0);
   };
 
   const className = twJoin(

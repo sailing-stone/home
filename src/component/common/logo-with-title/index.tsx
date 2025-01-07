@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import Image from '@/component/base/Image';
+import URL from '@/constant/url';
 
 interface Props {
   src?: string;
@@ -10,12 +12,14 @@ const LogoWithTitle = ({
   className,
 }: Props) => {
   return (
-    <Image
-      src={src}
-      alt='세일링스톤 로고'
-      lazy={false}
-      className={className}
-    />
+    <Link to={URL.MAIN}>
+      <Image
+        src={src}
+        alt='세일링스톤 로고'
+        lazy={false}
+        className={className}
+      />
+    </Link>
   );
 };
 

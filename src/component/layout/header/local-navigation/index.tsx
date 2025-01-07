@@ -31,7 +31,7 @@ const LocalNavigation = () => {
   };
 
   return (
-    <div className='flex h-full gap-12 text-[1.5rem] font-medium'>
+    <div className='flex h-full gap-[3.3rem] text-[1.5rem] font-medium'>
       <NavigationList
         list={SERVICE_NAVIGATION_LIST}
         className='flex-col items-start gap-4'

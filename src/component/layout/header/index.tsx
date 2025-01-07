@@ -14,12 +14,12 @@ const Header = () => {
       <GlobalNavigation onClick={handleToggle} />
       <section
         className={twJoin(
-          'z-10 px-40 flex items-center justify-between transition-height duration-300 ease-in-out absolute left-0 top-28 w-full bg-common-white overflow-y-hidden',
-          isToggle ? 'h-[35rem]' : 'h-0',
+          'z-10 px-40 flex justify-between transition-height duration-300 ease-in-out absolute left-0 top-28 w-full bg-common-white overflow-y-hidden',
+          isToggle ? 'h-[31rem]' : 'h-0',
         )}
       >
         <Space className='w-[10.5rem]' />
-        <div className='flex gap-60'>
+        <div className='mt-8 flex gap-60'>
           <LocalNavigation />
           <Space className='w-[6.7rem]' />
           <Space className='w-[6.3rem]' />
