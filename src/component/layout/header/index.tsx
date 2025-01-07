@@ -6,7 +6,7 @@ import GlobalNavigation from './global-navigation';
 import LocalNavigation from './local-navigation';
 
 const Header = () => {
-  const { isToggle, handleToggle } = useToggle();
+  const { isToggle, handleToggle, handleSetFalse } = useToggle();
 
   return (
     <header className='relative flex h-28 items-center justify-between bg-header px-40'>
@@ -20,7 +20,7 @@ const Header = () => {
       >
         <Space className='w-[10.5rem]' />
         <div className='mt-8 flex gap-60'>
-          <LocalNavigation />
+          <LocalNavigation onNavigate={handleSetFalse} />
           <Space className='w-[6.7rem]' />
           <Space className='w-[6.3rem]' />
           <Space className='w-[3.2em]' />

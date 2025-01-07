@@ -21,10 +21,15 @@ const SOLUTION_NAVIGATION_LIST = [
   { id: 9, text: 'Tableau Extension', href: URL.SOLUTION },
 ];
 
-const LocalNavigation = () => {
+interface Props {
+  onNavigate: () => void;
+}
+
+const LocalNavigation = ({ onNavigate }: Props) => {
   const [activeText, setActiveText] = useState(SERVICE_NAVIGATION_LIST[0].text);
 
-  const onNavigate = (text: string) => {
+  const handleOnNavigate = (text: string) => {
+    onNavigate();
     setActiveText(text);
 
     document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
@@ -42,7 +47,7 @@ const LocalNavigation = () => {
         list={SOLUTION_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={activeText}
-        onNavigate={onNavigate}
+        onNavigate={handleOnNavigate}
       />
     </div>
   );

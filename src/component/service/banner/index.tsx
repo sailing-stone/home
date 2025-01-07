@@ -6,7 +6,7 @@ const Banner = () => {
     >
       <div className='flex flex-col gap-[4.5rem]'>
         <div>
-          <p className='text-[3rem] font-medium'>서비스</p>
+          <p className='text-[3rem] font-medium leading-[3.6rem]'>서비스</p>
           <h1 className='banner-h1'>Tableau와 함께하는 데이터 혁신</h1>
         </div>
         <div className='text-[2rem] font-light'>

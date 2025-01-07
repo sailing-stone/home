@@ -21,6 +21,10 @@ const Router = () => {
         path={URL.CONTACT}
         element={<Pages.ContactPage />}
       />
+      <Route
+        path={URL.SOLUTION}
+        element={<Pages.SolutionPage />}
+      />
     </Routes>
   );
 };
