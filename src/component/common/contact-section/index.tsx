@@ -6,8 +6,9 @@ const ContactSection = () => {
   return (
     <section className='flex items-center justify-between gap-8 rounded-t-[3.2rem] bg-contact px-40 py-[6.9rem]'>
       <p className='text-[3.5rem] font-normal text-common-white'>
-        고객의 비즈니스 가치를 극대화하는 신뢰할 수 있는 데이터 파트너, <br />
-        <strong className='text-common-black'>세일링 스톤</strong>입니다.
+        고객의 비즈니스 가치를 극대화하는 신뢰할 수 있는 데이터 파트너,
+        <br />
+        <strong className='text-common-black'>세일링스톤</strong>입니다.
       </p>
       <Link
         to={URL.CONTACT}
