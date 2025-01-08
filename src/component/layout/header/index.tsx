@@ -1,32 +1,39 @@
 import { twJoin } from 'tailwind-merge';
 import Space from '@/component/base/space';
 import LogoWithTitle from '@/component/common/logo-with-title';
+import useHover from '@/hook/useHover';
 import useToggle from '@/hook/useToggle';
 import GlobalNavigation from './global-navigation';
 import LocalNavigation from './local-navigation';
 
 const Header = () => {
+  const { ref, isHover } = useHover<HTMLHeadElement>();
   const { isToggle, handleToggle, handleSetFalse } = useToggle();
 
   return (
-    <header className='relative flex h-28 items-center justify-between bg-header px-40'>
-      <LogoWithTitle />
-      <GlobalNavigation onClick={handleToggle} />
-      <section
+    <>
+      <header
+        ref={ref}
         className={twJoin(
-          'z-10 px-40 flex justify-between transition-height duration-300 ease-in-out absolute left-0 top-28 w-full bg-common-white overflow-y-hidden',
-          isToggle ? 'h-[31rem]' : 'h-0',
+          'z-20 backdrop-blur-sm fixed w-full flex h-28 items-center justify-between px-40 transition-colors duration-500',
+          isHover || isToggle ? 'bg-common-white' : 'bg-common-white/50',
         )}
       >
-        <Space className='w-[10.5rem]' />
-        <div className='mt-8 flex gap-60'>
+        <LogoWithTitle />
+        <GlobalNavigation onClick={handleToggle} />
+        <section
+          className={twJoin(
+            'z-10 py-8 px-40 justify-between absolute left-0 top-28 w-full bg-common-white',
+            'shadow-[0_-4px_10px_-5px_rgba(0,0,0,0.1)]',
+            isToggle ? 'flex' : 'hidden',
+          )}
+        >
+          <Space className='w-[10.5rem]' />
           <LocalNavigation onNavigate={handleSetFalse} />
-          <Space className='w-[6.7rem]' />
-          <Space className='w-[6.3rem]' />
-          <Space className='w-[3.2em]' />
-        </div>
-      </section>
-    </header>
+        </section>
+      </header>
+      <div className='h-28 bg-header' />
+    </>
   );
 };
 
