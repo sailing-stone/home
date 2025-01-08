@@ -25,6 +25,7 @@ module.exports = {
     'tailwindcss',
   ],
   rules: {
+    'jsx-a11y/media-has-caption': 'off',
     'react-refresh/only-export-components': 'off',
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',

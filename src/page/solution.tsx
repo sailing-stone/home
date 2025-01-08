@@ -1,3 +1,4 @@
+import ContactSection from '@/component/common/contact-section';
 import AIPortal from '@/component/solution/AI-portal';
 import Banner from '@/component/solution/banner';
 import Dashboard from '@/component/solution/dashboard';
@@ -12,6 +13,7 @@ const SolutionPage = () => {
       <AIPortal />
       <Dashboard />
       <TBD />
+      <ContactSection />
     </div>
   );
 };
