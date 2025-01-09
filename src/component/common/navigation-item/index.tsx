@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
+import { useLocalNavigation } from '@/context/local-navigation-context';
 
 interface Props {
   type?: 'GNB' | 'LNB';
@@ -18,7 +19,9 @@ const NavigationItem = ({
   isCurrentPath,
   onNavigate,
 }: Props) => {
+  const { handleSetNavigationItem } = useLocalNavigation();
   const handleNavigate = () => {
+    handleSetNavigationItem('');
     setTimeout(() => {
       if (onNavigate) {
         onNavigate(text);

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Image from '@/component/base/Image';
 import URL from '@/constant/url';
+import { useLocalNavigation } from '@/context/local-navigation-context';
 
 interface Props {
   src?: string;
@@ -11,6 +12,8 @@ const LogoWithTitle = ({
   src = '/image/logo-with-title.png',
   className,
 }: Props) => {
+  const { handleSetNavigationItem } = useLocalNavigation();
+
   return (
     <Link to={URL.MAIN}>
       <Image
@@ -18,6 +21,7 @@ const LogoWithTitle = ({
         alt='세일링스톤 로고'
         lazy={false}
         className={className}
+        onClick={() => handleSetNavigationItem('')}
       />
     </Link>
   );
