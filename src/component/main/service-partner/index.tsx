@@ -9,7 +9,6 @@ const ServicePartner = () => {
         height='18.7rem'
         src={SaleforcePartnerImage}
         alt='salesforce 로고'
-        lazy={false}
       />
       <div className='text-center text-common-white'>
         <h3 className='text-[4rem] font-bold '>

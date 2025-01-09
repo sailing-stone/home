@@ -48,7 +48,10 @@ const useLazyLoading = ({ lazy, threshold }: Props) => {
       return;
     }
 
-    observer = new IntersectionObserver(onIntersection, { threshold });
+    observer = new IntersectionObserver(onIntersection, {
+      threshold,
+      rootMargin: '50px',
+    });
 
     if (ref.current) {
       observer.observe(ref.current);

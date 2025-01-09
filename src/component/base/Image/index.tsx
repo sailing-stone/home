@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react';
+import PlaceholderImage from '@/asset/image/logo-with-title.png';
 import useLazyLoading from './useLazyLoading';
 
 type ObjectFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
@@ -18,8 +19,8 @@ const Image = ({
   width,
   height,
   lazy = true,
-  placeholder,
-  threshold = 0.5,
+  placeholder = PlaceholderImage,
+  threshold = 0.1,
   src,
   alt,
   objectFit = 'none',
