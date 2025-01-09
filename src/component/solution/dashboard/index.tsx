@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import DashboardImage_1 from '@/asset/image/solution/dashboard-bg1.png';
+import DashboardImage_2 from '@/asset/image/solution/dashboard-bg2.png';
+import DashboardImage_3 from '@/asset/image/solution/dashboard-bg3.png';
+import MonitorImage from '@/asset/image/solution/monitor.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
 import URL from '@/constant/url';
@@ -19,7 +23,7 @@ const Dashboard = () => {
         <Image
           width='77.9rem'
           height='50.5rem'
-          src='/image/solution/monitor.png'
+          src={MonitorImage}
           alt='모니터'
         />
         <p className='text-[4rem] font-medium leading-[7.5rem]'>
@@ -43,7 +47,7 @@ const Dashboard = () => {
         <li
           className='flex h-[62.2rem] w-[37rem] flex-col justify-between rounded-[3rem] bg-cover bg-center bg-no-repeat px-[4.4rem] py-[3.9rem]'
           style={{
-            backgroundImage: "url('/image/solution/dashboard-bg1.png')",
+            backgroundImage: `url(${DashboardImage_1})`,
           }}
         >
           <h3 className='text-[3.2rem] font-extrabold leading-[3.8rem] text-common-black'>
@@ -59,7 +63,7 @@ const Dashboard = () => {
         <li
           className='flex h-[40.1rem] w-[37rem] flex-col justify-between rounded-[3rem] bg-cover bg-center bg-no-repeat px-[4.4rem] py-[3.9rem]'
           style={{
-            backgroundImage: "url('/image/solution/dashboard-bg2.png')",
+            backgroundImage: `url(${DashboardImage_2})`,
           }}
         >
           <h3 className='text-[3.2rem] font-extrabold leading-[3.8rem] text-common-white'>
@@ -77,7 +81,7 @@ const Dashboard = () => {
         <li
           className='flex h-[40.1rem] w-[37rem] flex-col justify-between rounded-[3rem] bg-cover bg-center bg-no-repeat px-[4.4rem] py-[3.9rem]'
           style={{
-            backgroundImage: "url('/image/solution/dashboard-bg3.png')",
+            backgroundImage: `url(${DashboardImage_3})`,
           }}
         >
           <h3 className='text-[3.2rem] font-extrabold leading-[3.8rem] text-common-white'>

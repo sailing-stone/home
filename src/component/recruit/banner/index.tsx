@@ -1,8 +1,10 @@
+import BannerImage from '@/asset/image/recruit/banner.png';
+
 const Banner = () => {
   return (
     <section
       className='relative flex aspect-[16/9] max-h-[72rem] w-full items-end bg-cover bg-center bg-no-repeat px-[9.9rem] py-[7.1rem] text-common-white'
-      style={{ backgroundImage: "url('/image/recruit/banner.png')" }}
+      style={{ backgroundImage: `url(${BannerImage})` }}
     >
       <div className='absolute inset-0 bg-black/50' />
       <div className='relative z-10'>

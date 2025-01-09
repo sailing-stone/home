@@ -1,47 +1,61 @@
+import { AnimatePresence, motion } from 'framer-motion';
+import { twJoin } from 'tailwind-merge';
+import LogoImageWhiteBanner from '@/asset/image/logo-with-title-white-banner.png';
+import BannerVideo from '@/asset/video/main-banner.mp4';
 import Image from '@/component/base/Image';
 import useCount from '@/hook/useCount';
 import useInterval from '@/hook/useInterval';
 
 const CONTENT = [
-  <p key='content-1'>
+  <>
     데이터 활용을 위한
     <br />
     <span className='text-primary-main'>전문가</span>를 찾는다면
-  </p>,
-  <p key='content-2'>
+  </>,
+  <>
     데이터 활용을 위한
     <br />
     <span className='text-primary-main'>AI 솔루션</span>을 찾는다면
-  </p>,
-  <Image
-    key='content-3'
-    width='47rem'
-    height='19rem'
-    src='/image/logo-with-title-white-banner.png'
-    alt='로고'
-    lazy={false}
-  />,
+  </>,
 ];
 
 const Banner = () => {
-  const { count, increase } = useCount(CONTENT.length - 1);
+  const { count, increase } = useCount(2);
   useInterval(increase, 3000);
 
   return (
     <section className='relative'>
       <video
-        src='/video/main-banner.mp4'
+        src={BannerVideo}
         autoPlay
         loop
         preload='auto'
         muted
         className='max-h-[110rem] w-full object-cover'
       />
-      <div
-        key={count}
-        className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-fadeIn text-center text-[7rem] font-medium leading-[10rem] text-common-white'
-      >
-        {CONTENT[count]}
+      <div className='absolute left-1/2 top-1/2 flex h-[19rem] w-screen -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[7rem] font-medium leading-[10rem] text-common-white'>
+        <AnimatePresence>
+          <motion.p
+            key={count}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className='absolute w-full text-center'
+          >
+            {CONTENT[count]}
+          </motion.p>
+        </AnimatePresence>
+        <Image
+          width='47rem'
+          height='19rem'
+          src={LogoImageWhiteBanner}
+          alt='로고'
+          className={twJoin(
+            'animate-fadeIn absolute',
+            count === 2 ? 'block' : 'hidden',
+          )}
+        />
       </div>
     </section>
   );

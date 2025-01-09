@@ -1,3 +1,4 @@
+import PolygonImage from '@/asset/image/service/polygon.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
 import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
@@ -23,7 +24,7 @@ const BIEducation = () => {
       <Image
         width='121.3rem'
         height='34.4rem'
-        src='image/service/polygon.png'
+        src={PolygonImage}
         alt='아래 방향 삼각형'
       />
       <div className='mt-[10.7rem] flex gap-[15.8rem]  text-center text-[3.5rem] font-bold leading-[6.5rem] text-text-underline underline'>

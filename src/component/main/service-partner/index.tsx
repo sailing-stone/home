@@ -1,3 +1,4 @@
+import SaleforcePartnerImage from '@/asset/image/main/saleforce-partner.png';
 import Image from '@/component/base/Image';
 
 const ServicePartner = () => {
@@ -6,7 +7,7 @@ const ServicePartner = () => {
       <Image
         width='19rem'
         height='18.7rem'
-        src='/image/main/saleforce-partner.png'
+        src={SaleforcePartnerImage}
         alt='salesforce 로고'
         lazy={false}
       />

@@ -1,3 +1,4 @@
+import BannerVideo from '@/asset/video/service-banner.mp4';
 import useCount from '@/hook/useCount';
 import useInterval from '@/hook/useInterval';
 
@@ -41,7 +42,7 @@ const Banner = () => {
   return (
     <section className='relative text-common-white'>
       <video
-        src='/video/service-banner.mp4'
+        src={BannerVideo}
         autoPlay
         loop
         preload='auto'

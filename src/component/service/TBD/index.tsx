@@ -1,3 +1,4 @@
+import QualificationsImage from '@/asset/image/service/tableau-qualifications.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
 import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
@@ -25,7 +26,7 @@ const TBD = () => {
           <Image
             width='32.2rem'
             height='7.8rem'
-            src='image/service/tableau-qualifications.png'
+            src={QualificationsImage}
             alt='태블로 자격증들'
           />
           <p className='text-end text-[4rem] font-light leading-[6rem] text-common-white'>
