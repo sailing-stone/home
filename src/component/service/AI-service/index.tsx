@@ -1,8 +1,12 @@
 import Badge from '@/component/base/badge';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 
 const AIService = () => {
+  const ref = useIntersectingNavigation('태블로 생성형 AI 기반 BI 서비스');
+
   return (
     <section
+      ref={ref}
       id='태블로 생성형 AI 기반 BI 서비스'
       className='flex flex-col items-center pb-[32.5rem] pt-[31.1rem]'
     >

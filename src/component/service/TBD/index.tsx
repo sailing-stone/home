@@ -1,10 +1,14 @@
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 import TBDInfoList from './TBD-info-list';
 
 const TBD = () => {
+  const ref = useIntersectingNavigation('Tableau Expertise 서비스');
+
   return (
     <section
+      ref={ref}
       id='Tableau Expertise 서비스'
       className='flex flex-col items-center justify-center bg-contrast-200 pb-[20.9rem] pt-[18.7rem]'
     >

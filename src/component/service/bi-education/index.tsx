@@ -1,10 +1,14 @@
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 import EducationPointList from './education-point-list';
 
 const BIEducation = () => {
+  const ref = useIntersectingNavigation('Self-BI 교육 지원');
+
   return (
     <section
+      ref={ref}
       id='Self-BI 교육 지원'
       className='flex flex-col items-center justify-center pb-[26.6rem] pt-[10.7rem]'
     >

@@ -1,9 +1,13 @@
 import Badge from '@/component/base/badge';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 import ConsultingCardList from './consulting-card-list';
 
 const BIConsulting = () => {
+  const ref = useIntersectingNavigation('BI 컨설팅');
+
   return (
     <section
+      ref={ref}
       id='BI 컨설팅'
       className='flex flex-col items-center justify-center pt-[13.3rem]'
     >

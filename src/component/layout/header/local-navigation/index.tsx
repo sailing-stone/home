@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import NavigationList from '@/component/common/navigation-list';
 import URL from '@/constant/url';
+import { useLocalNavigation } from '@/context/local-navigation-context';
 
 const SERVICE_NAVIGATION_LIST = [
   { id: 1, text: 'BI 컨설팅', href: URL.SERVICE },
@@ -26,11 +26,11 @@ interface Props {
 }
 
 const LocalNavigation = ({ onNavigate }: Props) => {
-  const [activeText, setActiveText] = useState('');
+  const { navigationItem, handleSetNavigationItem } = useLocalNavigation();
 
   const handleOnNavigate = (text: string) => {
     onNavigate();
-    setActiveText(text);
+    handleSetNavigationItem(text);
 
     document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -40,13 +40,13 @@ const LocalNavigation = ({ onNavigate }: Props) => {
       <NavigationList
         list={SERVICE_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
-        activeText={activeText}
+        activeText={navigationItem}
         onNavigate={handleOnNavigate}
       />
       <NavigationList
         list={SOLUTION_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
-        activeText={activeText}
+        activeText={navigationItem}
         onNavigate={handleOnNavigate}
       />
     </div>

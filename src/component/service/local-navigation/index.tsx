@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import NavigationList from '@/component/common/navigation-list';
 import URL from '@/constant/url';
+import { useLocalNavigation } from '@/context/local-navigation-context';
 
 const SERVICE_NAVIGATION_LIST = [
   { id: 1, text: 'BI 컨설팅', href: URL.SERVICE },
@@ -10,10 +10,10 @@ const SERVICE_NAVIGATION_LIST = [
 ];
 
 const LocalNavigation = () => {
-  const [activeText, setActiveText] = useState(SERVICE_NAVIGATION_LIST[0].text);
+  const { navigationItem, handleSetNavigationItem } = useLocalNavigation();
 
   const onNavigate = (text: string) => {
-    setActiveText(text);
+    handleSetNavigationItem(text);
 
     document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -21,8 +21,8 @@ const LocalNavigation = () => {
   return (
     <NavigationList
       list={SERVICE_NAVIGATION_LIST}
-      activeText={activeText}
-      className='sticky top-28 z-10 gap-12 px-40 py-10 text-[1.8rem] font-medium backdrop-blur-sm'
+      activeText={navigationItem}
+      className='sticky top-28 z-10 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium'
       onNavigate={onNavigate}
     />
   );
