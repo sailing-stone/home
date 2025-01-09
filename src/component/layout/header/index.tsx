@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 import Space from '@/component/base/space';
 import LogoWithTitle from '@/component/common/logo-with-title';
@@ -21,16 +22,19 @@ const Header = () => {
       >
         <LogoWithTitle />
         <GlobalNavigation onClick={handleToggle} />
-        <section
-          className={twJoin(
-            'z-10 py-8 px-40 justify-between absolute left-0 top-28 w-full bg-common-white',
-            'shadow-[0_-4px_10px_-5px_rgba(0,0,0,0.1)]',
-            isToggle ? 'flex' : 'hidden',
+        <AnimatePresence>
+          {isToggle && (
+            <motion.section
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className='absolute left-0 top-28 z-10 flex w-full justify-between border-t border-common-black bg-common-white px-40 py-8'
+            >
+              <Space className='w-[10.5rem]' />
+              <LocalNavigation onNavigate={handleSetFalse} />
+            </motion.section>
           )}
-        >
-          <Space className='w-[10.5rem]' />
-          <LocalNavigation onNavigate={handleSetFalse} />
-        </section>
+        </AnimatePresence>
       </header>
       <div className='h-28 bg-header' />
     </>

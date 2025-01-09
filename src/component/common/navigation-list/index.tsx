@@ -6,6 +6,7 @@ interface Props {
   list: { id: number | string; href: string; text: string }[];
   className?: string;
   activeText?: string;
+  currentPathname?: string;
   onNavigate?: (text: string) => void;
 }
 
@@ -14,6 +15,7 @@ const NavigationList = ({
   list,
   className,
   activeText,
+  currentPathname,
   onNavigate,
 }: Props) => {
   return (
@@ -25,6 +27,7 @@ const NavigationList = ({
           href={href}
           text={text}
           isActive={activeText === text}
+          isCurrentPath={currentPathname === href}
           onNavigate={onNavigate}
         />
       ))}

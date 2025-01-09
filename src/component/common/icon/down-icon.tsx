@@ -1,5 +1,9 @@
-const DownIcon = () => (
-  <i>
+import { ComponentProps } from 'react';
+
+interface Props extends ComponentProps<'i'> {}
+
+const DownIcon = ({ ...rest }: Props) => (
+  <i {...rest}>
     <svg
       width='24'
       height='24'

@@ -6,10 +6,18 @@ interface Props {
   href: string;
   text: string;
   isActive?: boolean;
+  isCurrentPath?: boolean;
   onNavigate?: (text: string) => void;
 }
 
-const NavigationItem = ({ type, href, text, isActive, onNavigate }: Props) => {
+const NavigationItem = ({
+  type,
+  href,
+  text,
+  isActive,
+  isCurrentPath,
+  onNavigate,
+}: Props) => {
   const handleNavigate = () => {
     setTimeout(() => {
       if (onNavigate) {
@@ -25,6 +33,8 @@ const NavigationItem = ({ type, href, text, isActive, onNavigate }: Props) => {
     type === 'LNB' &&
       isActive &&
       'text-primary-main underline font-bold underline-offset-8 decoration-2',
+    type === 'GNB' && 'hover:text-primary-main',
+    type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
 
   return (
