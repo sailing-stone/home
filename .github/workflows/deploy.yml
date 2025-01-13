@@ -31,3 +31,4 @@ jobs:
           source: './dist/*'
           target: '/home/sstone/sailingstone/dist'
           command: sudo systemctl restart nginx
+          debug: true
