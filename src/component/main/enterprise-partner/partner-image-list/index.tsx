@@ -50,7 +50,7 @@ const PartnerImageList = () => {
       speed={100}
       direction='left'
     >
-      <ul className='flex'>
+      <ul className='flex gap-40'>
         {IMAGE_LIST.map(({ id, src, alt }) => (
           <PartnerImageItem
             key={id}

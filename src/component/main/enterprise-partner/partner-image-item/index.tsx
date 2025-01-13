@@ -7,7 +7,7 @@ interface Props {
 
 const PartnerImageItem = ({ src, alt }: Props) => {
   return (
-    <li className='mr-40'>
+    <li>
       <Image
         src={src}
         alt={alt}
