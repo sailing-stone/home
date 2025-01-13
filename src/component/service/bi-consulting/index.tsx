@@ -19,7 +19,7 @@ const BIConsulting = () => {
         요구에 맞는 전략적 Tableau 컨설팅을 제공합니다.
       </p>
       <ConsultingCardList />
-      <div className='flex w-full justify-center bg-consulting py-[11.4rem]'>
+      <div className='flex w-full justify-center bg-consulting py-[11.4rem] text-common-white'>
         <p className='text-center text-[3.5rem] font-medium'>
           고객의
           <span className='ml-4 font-extrabold text-primary-main'>
