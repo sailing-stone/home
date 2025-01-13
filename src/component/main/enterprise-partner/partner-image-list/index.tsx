@@ -49,6 +49,7 @@ const PartnerImageList = () => {
     <Marquee
       speed={100}
       direction='left'
+      pauseOnHover
     >
       <ul className='flex'>
         {IMAGE_LIST.map(({ id, src, alt }) => (
