@@ -1,0 +1,43 @@
+name: React App CI/CD to Nginx
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 푸시될 때 트리거
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # GitHub Actions가 실행될 환경 (우분투)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2 # 코드 리포지토리 체크아웃
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2 # Node.js 설치
+        with:
+          node-version: '22.6.0' # 사용할 Node.js 버전 (필요에 따라 수정)
+
+      - name: Install dependencies
+        run: yarn install # Yarn으로 의존성 설치
+
+      - name: Build React app
+        run: yarn build # React 앱 빌드
+
+      - name: Deploy to Nginx
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }} # GitHub Secrets에서 SSH 개인 키 가져오기
+          HOST: ${{ secrets.SSH_HOST }} # GitHub Secrets에서 서버 주소 가져오기
+          USER: ${{ secrets.SSH_USER }} # GitHub Secrets에서 서버 사용자 이름 가져오기
+        run: |
+          # SSH 설정
+          mkdir -p ~/.ssh
+          echo "$PRIVATE_KEY" > ~/.ssh/id_rsa  # 비공개 키 설정
+          chmod 600 ~/.ssh/id_rsa  # 권한 설정
+          ssh-keyscan -H $HOST >> ~/.ssh/known_hosts  # 서버의 SSH 호스트 키를 known_hosts에 추가
+
+          # React 빌드 결과물을 서버에 배포
+          scp -r ./dist/* $USER@$HOST:/home/sstone/sailingstone/dist/  # 빌드된 파일을 서버로 복사
+
+          # Nginx 재시작 (필요 시)
+          ssh $USER@$HOST "sudo systemctl restart nginx"  # 서버에서 Nginx 재시작
