@@ -30,4 +30,4 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           source: './dist/*'
           target: '/home/sstone/sailingstone/dist'
-          script: sudo systemctl restart nginx
+          command: sudo systemctl restart nginx
