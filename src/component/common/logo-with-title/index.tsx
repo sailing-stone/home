@@ -17,7 +17,6 @@ const LogoWithTitle = ({ src, className }: Props) => {
       <Image
         src={src || LogoImage}
         alt='세일링스톤 로고'
-        lazy={false}
         className={className}
         onClick={() => handleSetNavigationItem('')}
       />
