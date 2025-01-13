@@ -24,7 +24,7 @@ const Banner = () => {
   useInterval(increase, 3000);
 
   return (
-    <section className='relative'>
+    <section className='relative w-full'>
       <video
         src={BannerVideo}
         autoPlay
@@ -33,7 +33,7 @@ const Banner = () => {
         muted
         className='max-h-[110rem] w-full object-cover'
       />
-      <div className='absolute left-1/2 top-1/2 flex h-[19rem] w-screen -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[7rem] font-medium leading-[10rem] text-common-white'>
+      <div className='absolute left-1/2 top-1/2 flex h-[19rem] w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[7rem] font-medium leading-[10rem] text-common-white'>
         <AnimatePresence>
           <motion.p
             key={count}
