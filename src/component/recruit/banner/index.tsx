@@ -1,4 +1,4 @@
-import BannerImage from '@/asset/image/recruit/banner.png';
+import BannerImage from '@/asset/image/recruit/recruit-banner.png';
 
 const Banner = () => {
   return (

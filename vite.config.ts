@@ -7,39 +7,36 @@ import imageminSvgo from 'imagemin-svgo';
 import imageminWebp from 'imagemin-webp';
 import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
-// import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    // viteStaticCopy({
-    //   targets: [
-    //     {
-    //       src: 'src/asset/*',
-    //       dest: 'assets',
-    //     },
-    //   ],
-    // }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'src/asset/*',
+          dest: 'assets',
+        },
+      ],
+    }),
     viteCompression({
       algorithm: 'gzip',
       ext: 'gz',
     }),
     viteImagemin({
+      cache: false,
       plugins: {
-        // PNG 무손실 압축
-        png: imageminPngquant({ quality: [1, 1] }), // 무손실 압축 (최대 품질)
-        // SVG 무손실 압축
+        png: imageminPngquant({ quality: [1, 1] }),
         svg: imageminSvgo({
-          plugins: [{ removeViewBox: false }, { cleanupIDs: false }], // 무손실 최적화
+          plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
         }),
-        // GIF 무손실 압축
-        gif: imageminGifsicle({ optimizationLevel: 3, interlaced: false }), // 무손실 옵션
+        gif: imageminGifsicle({ optimizationLevel: 3, interlaced: false }),
       },
       makeWebp: {
         plugins: {
-          // WebP 무손실 압축
-          png: imageminWebp({ quality: 100 }), // 최대 품질로 WebP 변환
+          png: imageminWebp({ quality: 100 }),
         },
       },
     }),

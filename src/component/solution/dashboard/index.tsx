@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import DashboardImage_1 from '@/asset/image/solution/dashboard-bg1.png';
-import DashboardImage_2 from '@/asset/image/solution/dashboard-bg2.png';
-import DashboardImage_3 from '@/asset/image/solution/dashboard-bg3.png';
+import DashboardImage_1 from '@/asset/image/solution/dashboard-bg_1.png';
+import DashboardImage_2 from '@/asset/image/solution/dashboard-bg_2.png';
+import DashboardImage_3 from '@/asset/image/solution/dashboard-bg_3.png';
 import MonitorImage from '@/asset/image/solution/monitor.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';

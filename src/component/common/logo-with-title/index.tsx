@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoImage from '@/asset/image/logo-with-title.png';
+import LogoImage from '@/asset/image/logo.png';
 import Image from '@/component/base/Image';
 import URL from '@/constant/url';
 import { useLocalNavigation } from '@/context/local-navigation-context';

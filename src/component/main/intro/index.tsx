@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
-import MainIntroImage_1 from '@/asset/image/main/main-intro1.png';
-import MainIntroImage_2 from '@/asset/image/main/main-intro2.png';
+import MainIntroImage_1 from '@/asset/image/main/main-intro_1.png';
+import MainIntroImage_2 from '@/asset/image/main/main-intro_2.png';
 import Image from '@/component/base/Image';
 import useCount from '@/hook/useCount';
 import useInterval from '@/hook/useInterval';

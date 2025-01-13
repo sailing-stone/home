@@ -1,11 +1,11 @@
-import LogoImageWithe from '@/asset/image/logo-with-title-white.png';
+import LogoImage from '@/asset/image/logo-footer.png';
 import LogoWithTitle from '@/component/common/logo-with-title';
 
 const Footer = () => {
   return (
     <footer className='flex flex-col gap-12 bg-contrast-200 px-[10.1rem] py-[8.5rem] pb-[16.4rem] text-[1.5rem] font-medium text-text-footer'>
       <LogoWithTitle
-        src={LogoImageWithe}
+        src={LogoImage}
         className='h-[5.5rem] w-[13.1rem]'
       />
       <p>

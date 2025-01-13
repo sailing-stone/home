@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import PlaceholderImage from '@/asset/image/logo-with-title.png';
+import PlaceholderImage from '@/asset/image/logo.png';
 import useLazyLoading from './useLazyLoading';
 
 type ObjectFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';

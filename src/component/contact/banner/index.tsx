@@ -1,4 +1,4 @@
-import BannerImage from '@/asset/image/contact/banner.png';
+import BannerImage from '@/asset/image/contact/contact-banner.png';
 
 const Banner = () => {
   return (

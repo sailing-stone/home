@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
-import LogoImageWhiteBanner from '@/asset/image/logo-with-title-white-banner.png';
+import BannerLogoImage from '@/asset/image/logo-banner.png';
 import BannerVideo from '@/asset/video/main-banner.mp4';
 import Image from '@/component/base/Image';
 import useCount from '@/hook/useCount';
@@ -49,7 +49,7 @@ const Banner = () => {
         <Image
           width='47rem'
           height='19rem'
-          src={LogoImageWhiteBanner}
+          src={BannerLogoImage}
           alt='로고'
           className={twJoin(
             'animate-fadeIn absolute',
