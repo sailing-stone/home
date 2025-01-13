@@ -7,20 +7,11 @@ import imageminSvgo from 'imagemin-svgo';
 import imageminWebp from 'imagemin-webp';
 import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: 'src/asset/*',
-          dest: 'assets',
-        },
-      ],
-    }),
     viteCompression({
       algorithm: 'gzip',
       ext: 'gz',
@@ -38,13 +29,17 @@ export default defineConfig({
         plugins: {
           png: imageminWebp({ quality: 100 }),
         },
+        skipIfLargerThan: 'original',
       },
     }),
   ],
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
-  server: {
-    host: '0.0.0.0',
+  build: {
+    assetsInlineLimit: 0,
   },
+  // server: {
+  //   host: '0.0.0.0',
+  // },
 });

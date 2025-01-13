@@ -15,6 +15,8 @@ export interface Props extends ComponentProps<'img'> {
   objectFit?: ObjectFit;
 }
 
+const isDevelopment = import.meta.env.MODE === 'development';
+
 const Image = ({
   width,
   height,
@@ -28,10 +30,16 @@ const Image = ({
 }: Props) => {
   const { ref, loaded } = useLazyLoading({ lazy, threshold });
 
+  const convertedSrc = isDevelopment ? src : `${src}.webp`;
+
+  const convertedPlaceholder = isDevelopment
+    ? placeholder
+    : `${placeholder}.webp`;
+
   return (
     <img
       ref={ref}
-      src={loaded ? src : placeholder}
+      src={loaded ? convertedSrc : convertedPlaceholder}
       alt={alt}
       style={{ width, height, objectFit }}
       {...rest}
