@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14' # 원하는 Node.js 버전으로 설정
+          node-version: '22.6.0' # 원하는 Node.js 버전으로 설정
 
       # 3. Install dependencies
       - name: Install dependencies
