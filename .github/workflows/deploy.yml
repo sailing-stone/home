@@ -38,4 +38,4 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp -r dist/* $SERVER_USER@$SERVER_HOST:$SERVER_PATH
+          scp -v -r dist/* $SERVER_USER@$SERVER_HOST:$SERVER_PATH
