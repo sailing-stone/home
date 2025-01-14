@@ -11,6 +11,7 @@ const PartnerImageItem = ({ src, alt }: Props) => {
       <Image
         src={src}
         alt={alt}
+        lazy={false}
       />
     </li>
   );

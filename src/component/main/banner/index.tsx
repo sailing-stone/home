@@ -20,7 +20,7 @@ const CONTENT = [
 ];
 
 const Banner = () => {
-  const { count, increase } = useCount(2);
+  const { count, increase } = useCount(CONTENT.length);
   useInterval(increase, 3000);
 
   return (
