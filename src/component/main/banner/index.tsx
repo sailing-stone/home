@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import { twJoin } from 'tailwind-merge';
 import BannerLogoImage from '@/asset/image/logo-banner.png';
 import BannerVideo from '@/asset/video/main-banner.mp4';
@@ -31,30 +30,21 @@ const Banner = () => {
         loop
         preload='auto'
         muted
-        className='max-h-[110rem] w-full object-cover'
+        className='max-h-[70rem] w-full object-cover'
       />
-      <div className='absolute left-1/2 top-1/2 flex h-[19rem] w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[7rem] font-medium leading-[10rem] text-common-white'>
-        <AnimatePresence>
-          <motion.p
-            key={count}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className='absolute w-full text-center'
-          >
-            {CONTENT[count]}
-          </motion.p>
-        </AnimatePresence>
+      <div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[5rem] font-extrabold leading-[6rem] text-common-white'>
+        <p
+          key={count}
+          className='animate-fadeIn text-center'
+        >
+          {CONTENT[count]}
+        </p>
         <Image
           width='47rem'
           height='19rem'
           src={BannerLogoImage}
           alt='로고'
-          className={twJoin(
-            'animate-fadeIn absolute',
-            count === 2 ? 'block' : 'hidden',
-          )}
+          className={twJoin('animate-fadeIn', count === 2 ? 'block' : 'hidden')}
         />
       </div>
     </section>
