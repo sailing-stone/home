@@ -63,7 +63,7 @@ const Banner = () => {
           key={count}
           className='animate-fadeIn text-[2rem] font-light'
         >
-          <p>{CONTENT[count].description}</p>
+          {CONTENT[count].description}
         </div>
       </div>
     </section>

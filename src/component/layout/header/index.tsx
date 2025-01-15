@@ -26,7 +26,10 @@ const Header = () => {
         )}
       >
         <LogoWithTitle />
-        <GlobalNavigation onClick={handleToggle} />
+        <GlobalNavigation
+          onClick={handleToggle}
+          onNavigate={handleSetFalse}
+        />
         <AnimatePresence>
           {isToggle && (
             <motion.section

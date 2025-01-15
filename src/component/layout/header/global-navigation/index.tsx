@@ -11,9 +11,10 @@ const GNB_LIST = [
 
 interface Props {
   onClick: () => void;
+  onNavigate?: (text: string) => void;
 }
 
-const GlobalNavigation = ({ onClick }: Props) => {
+const GlobalNavigation = ({ onClick, onNavigate }: Props) => {
   const { pathname } = useLocation();
 
   return (
@@ -24,6 +25,7 @@ const GlobalNavigation = ({ onClick }: Props) => {
         type='GNB'
         list={GNB_LIST}
         currentPathname={pathname}
+        onNavigate={onNavigate}
       />
     </nav>
   );
