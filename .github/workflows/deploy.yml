@@ -7,27 +7,30 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted  # self-hosted runner 사용
-    
+    runs-on: self-hosted # self-hosted runner 사용
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Build
-      run: npm run build
-      
-    - name: Copy build files
-      run: |
-        # 기존 dist 디렉토리 삭제 (있다면)
-        rm -rf /home/sstone/sailingstone/dist
-        
-        # 새로운 빌드 파일 복사
-        cp -r dist /home/sstone/sailingstone/
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install yarn
+        run: npm install -g yarn
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Copy build files
+        run: |
+          # 기존 dist 디렉토리 삭제 (있다면)
+          rm -rf /home/sstone/sailingstone/dist
+
+          # 새로운 빌드 파일 복사
+          cp -r dist /home/sstone/sailingstone/
