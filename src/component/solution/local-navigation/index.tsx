@@ -15,20 +15,13 @@ const SOLUTION_NAVIGATION_LIST = [
 ];
 
 const LocalNavigation = () => {
-  const { navigationItem, handleSetNavigationItem } = useLocalNavigation();
-
-  const onNavigate = (text: string) => {
-    handleSetNavigationItem(text);
-
-    document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { navigationItem } = useLocalNavigation();
 
   return (
     <NavigationList
       list={SOLUTION_NAVIGATION_LIST}
       activeText={navigationItem}
       className='sticky top-28 z-10 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium'
-      onNavigate={onNavigate}
     />
   );
 };

@@ -12,7 +12,7 @@ const GNB_LIST = [
 
 const GlobalNavigation = () => {
   const { pathname } = useLocation();
-  const { handleToggle, handleSetFalse } = useLNBToggle();
+  const { handleToggle } = useLNBToggle();
 
   return (
     <nav className='relative flex gap-60 text-[1.8rem] font-medium leading-[2.1rem]'>
@@ -22,7 +22,6 @@ const GlobalNavigation = () => {
         type='GNB'
         list={GNB_LIST}
         currentPathname={pathname}
-        onNavigate={handleSetFalse}
       />
     </nav>
   );

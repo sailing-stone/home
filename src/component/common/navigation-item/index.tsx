@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
+import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
 interface Props {
@@ -9,7 +10,6 @@ interface Props {
   text: string;
   isActive?: boolean;
   isCurrentPath?: boolean;
-  onNavigate?: () => void;
 }
 
 const NavigationItem = ({
@@ -19,9 +19,9 @@ const NavigationItem = ({
   text,
   isActive,
   isCurrentPath,
-  onNavigate,
 }: Props) => {
   const { handleSetNavigationItem } = useLocalNavigation();
+  const { handleSetFalse } = useLNBToggle();
 
   const handleNavigate = () => {
     if (type === 'GNB') {
@@ -32,11 +32,7 @@ const NavigationItem = ({
       handleSetNavigationItem(text);
     }
 
-    setTimeout(() => {
-      if (onNavigate) {
-        onNavigate();
-      }
-    }, 0);
+    handleSetFalse();
   };
 
   const className = twJoin(

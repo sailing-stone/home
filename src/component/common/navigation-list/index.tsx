@@ -7,7 +7,6 @@ interface Props {
   className?: string;
   activeText?: string;
   currentPathname?: string;
-  onNavigate?: () => void;
 }
 
 const NavigationList = ({
@@ -16,7 +15,6 @@ const NavigationList = ({
   className,
   activeText,
   currentPathname,
-  onNavigate,
 }: Props) => {
   return (
     <ul className={twMerge('flex items-center gap-[15rem]', className)}>
@@ -29,7 +27,6 @@ const NavigationList = ({
           text={text}
           isActive={activeText === text}
           isCurrentPath={currentPathname === href}
-          onNavigate={onNavigate}
         />
       ))}
     </ul>

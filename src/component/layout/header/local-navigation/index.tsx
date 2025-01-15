@@ -1,6 +1,5 @@
 import NavigationList from '@/component/common/navigation-list';
 import URL from '@/constant/url';
-import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
 const SERVICE_NAVIGATION_LIST = [
@@ -29,7 +28,6 @@ const SOLUTION_NAVIGATION_LIST = [
 
 const LocalNavigation = () => {
   const { navigationItem } = useLocalNavigation();
-  const { handleSetFalse } = useLNBToggle();
 
   return (
     <div className='flex h-full w-[90.1rem] gap-[3.3rem] text-[1.5rem] font-medium'>
@@ -37,13 +35,11 @@ const LocalNavigation = () => {
         list={SERVICE_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={navigationItem}
-        onNavigate={handleSetFalse}
       />
       <NavigationList
         list={SOLUTION_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={navigationItem}
-        onNavigate={handleSetFalse}
       />
     </div>
   );
