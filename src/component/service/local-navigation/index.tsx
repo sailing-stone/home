@@ -3,27 +3,25 @@ import URL from '@/constant/url';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
 const SERVICE_NAVIGATION_LIST = [
-  { id: 1, text: 'BI 컨설팅', href: URL.SERVICE },
-  { id: 2, text: 'Self-BI 교육 지원', href: URL.SERVICE },
-  { id: 3, text: 'Tableau Expertise 서비스', href: URL.SERVICE },
-  { id: 4, text: '태블로 생성형 AI 기반 BI 서비스', href: URL.SERVICE },
+  { id: 1, hash: 'consulting', text: 'BI 컨설팅', href: URL.SERVICE },
+  { id: 2, hash: 'education', text: 'Self-BI 교육 지원', href: URL.SERVICE },
+  { id: 3, hash: 'TBD', text: 'Tableau Expertise 서비스', href: URL.SERVICE },
+  {
+    id: 4,
+    hash: 'AI',
+    text: '태블로 생성형 AI 기반 BI 서비스',
+    href: URL.SERVICE,
+  },
 ];
 
 const LocalNavigation = () => {
-  const { navigationItem, handleSetNavigationItem } = useLocalNavigation();
-
-  const onNavigate = (text: string) => {
-    handleSetNavigationItem(text);
-
-    document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { navigationItem } = useLocalNavigation();
 
   return (
     <NavigationList
       list={SERVICE_NAVIGATION_LIST}
       activeText={navigationItem}
-      className='sticky top-28 z-10 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium'
-      onNavigate={onNavigate}
+      className='sticky top-28 z-10 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium shadow-lg'
     />
   );
 };

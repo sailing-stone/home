@@ -36,7 +36,7 @@ const Header = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='absolute left-0 top-28 z-10 flex w-full justify-between bg-common-white px-40 py-8 shadow-lg'
+              className='absolute left-0 top-28 z-20 flex w-full justify-between bg-common-white px-40 py-8 shadow-lg'
             >
               <Space className='w-[10.5rem]' />
               <LocalNavigation onNavigate={handleSetFalse} />

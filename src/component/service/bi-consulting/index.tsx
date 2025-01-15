@@ -8,11 +8,15 @@ const BIConsulting = () => {
   return (
     <section
       ref={ref}
-      id='BI 컨설팅'
       className='flex flex-col items-center justify-center pt-[13.3rem]'
     >
       <Badge>
-        <h1 className='section-title'>BI 컨설팅</h1>
+        <h1
+          id='consulting'
+          className='section-title'
+        >
+          BI 컨설팅
+        </h1>
       </Badge>
       <p className='section-description'>
         세일링 스톤은 데이터 분석과 시각화 경험을 바탕으로 고객의 비즈니스

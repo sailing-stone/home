@@ -10,11 +10,15 @@ const BIEducation = () => {
   return (
     <section
       ref={ref}
-      id='Self-BI 교육 지원'
       className='flex flex-col items-center justify-center pb-[26.6rem] pt-[10.7rem]'
     >
       <Badge>
-        <h1 className='section-title'>Self BI 교육 지원</h1>
+        <h1
+          id='education'
+          className='section-title'
+        >
+          Self BI 교육 지원
+        </h1>
       </Badge>
       <p className='section-description'>
         Tableau에 대한 깊은 이해와 활용 능력을 높이는 맞춤형 교육 프로그램을

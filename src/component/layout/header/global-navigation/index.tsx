@@ -11,7 +11,7 @@ const GNB_LIST = [
 
 interface Props {
   onClick: () => void;
-  onNavigate?: (text: string) => void;
+  onNavigate?: () => void;
 }
 
 const GlobalNavigation = ({ onClick, onNavigate }: Props) => {

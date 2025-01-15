@@ -7,11 +7,15 @@ const AIService = () => {
   return (
     <section
       ref={ref}
-      id='태블로 생성형 AI 기반 BI 서비스'
       className='flex flex-col items-center pb-[32.5rem] pt-[31.1rem]'
     >
       <Badge>
-        <h1 className='section-title'>생성형 AI 기반 BI 서비스</h1>
+        <h1
+          id='AI'
+          className='section-title'
+        >
+          생성형 AI 기반 BI 서비스
+        </h1>
       </Badge>
       <p className='section-description'>
         기업 데이터를 활용한 분석 및 인사이트 생성을 자동화하여 비즈니스

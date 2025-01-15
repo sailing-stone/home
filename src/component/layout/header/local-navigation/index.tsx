@@ -3,10 +3,15 @@ import URL from '@/constant/url';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
 const SERVICE_NAVIGATION_LIST = [
-  { id: 1, text: 'BI 컨설팅', href: URL.SERVICE },
-  { id: 2, text: 'Self-BI 교육 지원', href: URL.SERVICE },
-  { id: 3, text: 'Tableau Expertise 서비스', href: URL.SERVICE },
-  { id: 4, text: '태블로 생성형 AI 기반 BI 서비스', href: URL.SERVICE },
+  { id: 1, hash: 'consulting', text: 'BI 컨설팅', href: URL.SERVICE },
+  { id: 2, hash: 'education', text: 'Self-BI 교육 지원', href: URL.SERVICE },
+  { id: 3, hash: 'TBD', text: 'Tableau Expertise 서비스', href: URL.SERVICE },
+  {
+    id: 4,
+    hash: 'AI',
+    text: '태블로 생성형 AI 기반 BI 서비스',
+    href: URL.SERVICE,
+  },
 ];
 
 const SOLUTION_NAVIGATION_LIST = [
@@ -26,14 +31,7 @@ interface Props {
 }
 
 const LocalNavigation = ({ onNavigate }: Props) => {
-  const { navigationItem, handleSetNavigationItem } = useLocalNavigation();
-
-  const handleOnNavigate = (text: string) => {
-    onNavigate();
-    handleSetNavigationItem(text);
-
-    document.getElementById(text)?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const { navigationItem } = useLocalNavigation();
 
   return (
     <div className='flex h-full w-[90.1rem] gap-[3.3rem] text-[1.5rem] font-medium'>
@@ -41,13 +39,13 @@ const LocalNavigation = ({ onNavigate }: Props) => {
         list={SERVICE_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={navigationItem}
-        onNavigate={handleOnNavigate}
+        onNavigate={onNavigate}
       />
       <NavigationList
         list={SOLUTION_NAVIGATION_LIST}
         className='flex-col items-start gap-4'
         activeText={navigationItem}
-        onNavigate={handleOnNavigate}
+        onNavigate={onNavigate}
       />
     </div>
   );

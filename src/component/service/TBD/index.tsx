@@ -10,11 +10,13 @@ const TBD = () => {
   return (
     <section
       ref={ref}
-      id='Tableau Expertise 서비스'
       className='flex flex-col items-center justify-center bg-contrast-200 pb-[20.9rem] pt-[18.7rem]'
     >
       <Badge>
-        <h1 className='section-title text-common-white'>
+        <h1
+          id='TBD'
+          className='section-title text-common-white'
+        >
           WEB / MOBILE APP (TBD)
         </h1>
       </Badge>

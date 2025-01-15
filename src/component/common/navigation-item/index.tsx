@@ -4,15 +4,17 @@ import { useLocalNavigation } from '@/context/local-navigation-context';
 
 interface Props {
   type?: 'GNB' | 'LNB';
+  hash?: string;
   href: string;
   text: string;
   isActive?: boolean;
   isCurrentPath?: boolean;
-  onNavigate?: (text: string) => void;
+  onNavigate?: () => void;
 }
 
 const NavigationItem = ({
   type,
+  hash,
   href,
   text,
   isActive,
@@ -20,11 +22,19 @@ const NavigationItem = ({
   onNavigate,
 }: Props) => {
   const { handleSetNavigationItem } = useLocalNavigation();
+
   const handleNavigate = () => {
-    handleSetNavigationItem('');
+    if (type === 'GNB') {
+      handleSetNavigationItem('');
+    }
+
+    if (type === 'LNB') {
+      handleSetNavigationItem(text);
+    }
+
     setTimeout(() => {
       if (onNavigate) {
-        onNavigate(text);
+        onNavigate();
       }
     }, 0);
   };
@@ -43,7 +53,7 @@ const NavigationItem = ({
   return (
     <li className={className}>
       <Link
-        to={href}
+        to={{ pathname: href, hash }}
         onClick={handleNavigate}
       >
         {text}
