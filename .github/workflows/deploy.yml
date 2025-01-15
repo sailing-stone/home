@@ -27,10 +27,7 @@ jobs:
     - name: Copy build files
       run: |
         # 기존 dist 디렉토리 삭제 (있다면)
-        sudo rm -rf /home/sstone/sailingstone/dist
+        rm -rf /home/sstone/sailingstone/dist
         
         # 새로운 빌드 파일 복사
-        sudo cp -r dist /home/sstone/sailingstone/
-        
-        # 권한 설정 (nginx 사용자가 접근할 수 있도록)
-        sudo chown -R www-data:www-data /home/sstone/sailingstone/dist
+        cp -r dist /home/sstone/sailingstone/
