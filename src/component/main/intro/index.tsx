@@ -38,7 +38,7 @@ const Intro = () => {
         className={twJoin('animate-fadeIn', count === 1 ? 'block' : 'hidden')}
       />
       <div className='flex w-[60rem] flex-col gap-[3.3rem] text-common-black'>
-        <h3 className='text-[4rem] font-extrabold'>WITH SAILING STONE</h3>
+        <h3 className='text-[4rem] font-extrabold'>WITH SAILING STONE.</h3>
         <div className='relative'>
           <AnimatePresence>
             <motion.p
