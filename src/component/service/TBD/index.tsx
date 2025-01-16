@@ -17,7 +17,7 @@ const TBD = () => {
           id='TBD'
           className='section-title text-common-white'
         >
-          WEB / MOBILE APP (TBD)
+          Tableau Experties Service
         </h1>
       </Badge>
       <p className='section-description text-common-white'>
