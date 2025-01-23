@@ -36,7 +36,7 @@ const NavigationItem = ({
   };
 
   const className = twJoin(
-    'shrink-0 leading-[2.1rem] transition-all duration-300 ease-in',
+    'shrink-0 leading-[2.1rem]',
     type === 'LNB' &&
       'hover:text-primary-main hover:underline hover:underline-offset-8 hover:decoration-2',
     type === 'LNB' &&

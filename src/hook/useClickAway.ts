@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const events: ['mousedown', 'touchstart'] = ['mousedown', 'touchstart'];
+const events = ['click'] as const;
 
 const useClickAway = <T extends HTMLElement>(
   callback: (e?: MouseEvent | TouchEvent) => void,

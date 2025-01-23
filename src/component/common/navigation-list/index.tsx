@@ -1,3 +1,4 @@
+import { ForwardedRef, forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import NavigationItem from '../navigation-item';
 
@@ -9,28 +10,30 @@ interface Props {
   currentPathname?: string;
 }
 
-const NavigationList = ({
-  type = 'LNB',
-  list,
-  className,
-  activeText,
-  currentPathname,
-}: Props) => {
-  return (
-    <ul className={twMerge('flex items-center gap-[15rem]', className)}>
-      {list.map(({ id, hash, href, text }) => (
-        <NavigationItem
-          key={id}
-          hash={hash}
-          type={type}
-          href={href}
-          text={text}
-          isActive={activeText === text}
-          isCurrentPath={currentPathname === href}
-        />
-      ))}
-    </ul>
-  );
-};
+const NavigationList = forwardRef(
+  (
+    { type = 'LNB', list, className, activeText, currentPathname }: Props,
+    ref?: ForwardedRef<HTMLUListElement>,
+  ) => {
+    return (
+      <ul
+        ref={ref}
+        className={twMerge('flex items-center gap-[5rem]', className)}
+      >
+        {list.map(({ id, hash, href, text }) => (
+          <NavigationItem
+            key={id}
+            hash={hash}
+            type={type}
+            href={href}
+            text={text}
+            isActive={activeText === text}
+            isCurrentPath={currentPathname === href}
+          />
+        ))}
+      </ul>
+    );
+  },
+);
 
 export default NavigationList;
