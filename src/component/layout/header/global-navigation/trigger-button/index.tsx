@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 import { twJoin } from 'tailwind-merge';
-import DownIcon from '@/component/common/icon/down-icon';
+import Down from '@/component/common/icon/down.svg?react';
 import NavigationList from '@/component/common/navigation-list';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 import useClickAway from '@/hook/useClickAway';
@@ -35,13 +35,16 @@ const TriggerButton = ({
   return (
     <button
       type='button'
-      className='relative flex shrink-0 items-center gap-[0.7rem]'
+      className={twJoin(
+        'relative flex shrink-0 items-center gap-[0.7rem]',
+        isActive ? 'text-primary-main' : 'text-common-black',
+      )}
       onClick={(event: MouseEvent<HTMLButtonElement>) => {
         onClick(event, title);
       }}
     >
       {title}
-      <DownIcon />
+      <Down />
       <NavigationList
         ref={ref}
         list={navigationList}

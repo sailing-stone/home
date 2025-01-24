@@ -7,11 +7,13 @@ import imageminSvgo from 'imagemin-svgo';
 import imageminWebp from 'imagemin-webp';
 import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
+import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    svgr(),
     viteCompression({
       algorithm: 'gzip',
       ext: 'gz',

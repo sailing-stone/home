@@ -36,13 +36,12 @@ const NavigationItem = ({
   };
 
   const className = twJoin(
-    'shrink-0 leading-[2.1rem]',
+    'shrink-0 text-common-black hover:text-primary-main',
     type === 'LNB' &&
-      'hover:text-primary-main hover:underline hover:underline-offset-8 hover:decoration-2',
+      'hover:underline hover:underline-offset-4 hover:decoration-2',
     type === 'LNB' &&
       isActive &&
-      'text-primary-main underline font-bold underline-offset-8 decoration-2',
-    type === 'GNB' && 'hover:text-primary-main',
+      'text-primary-main underline underline-offset-4 decoration-2',
     type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
 

@@ -17,6 +17,42 @@ body {
   height: 100%;
 }
 
+@layer base {
+  .title {
+    @apply text-[7rem] tablet:text-[4.5rem] mobile:text-[3rem];
+  }
+  .title-16 {
+    @apply text-[1.6rem] tablet:text-[1.4rem] mobile:text-[1.2rem];
+  }
+  .title-20 {
+    @apply text-[2rem] tablet:text-[1.6rem] mobile:text-[1.2rem];
+  }
+  .title-26 {
+    @apply text-[2.6rem] tablet:text-[2rem] mobile:text-[1.4rem];
+  }
+  .title-28 {
+    @apply text-[2.8rem] tablet:text-[2.4rem] mobile:text-[1.6rem];
+  }
+  .title-30 {
+    @apply text-[3rem] tablet:text-[2rem] mobile:text-[1.8rem];
+  }
+  .title-32 {
+    @apply text-[3.2rem] tablet:text-[2.8rem] mobile:text-[2rem];
+  }
+  .title-40 {
+    @apply text-[4rem] tablet:text-[3.5rem] mobile:text-[2.4rem];
+  }
+  .title-50 {
+    @apply text-[5rem] tablet:text-[4rem] mobile:text-[2.6rem];
+  }
+  .body {
+    @apply text-[2rem] tablet:text-[1.6rem] mobile:text-[1.2rem];
+  }
+  .body-20 {
+    @apply text-[2rem] tablet:text-[1.4rem] mobile-text-[1.2rem];
+  }
+}
+
 @layer components {
   .banner-h1 {
     @apply text-[8rem] font-bold leading-[9.5rem] text-common-white;
