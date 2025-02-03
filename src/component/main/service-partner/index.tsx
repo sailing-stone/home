@@ -3,7 +3,7 @@ import Image from '@/component/base/Image';
 
 const ServicePartner = () => {
   return (
-    <section className='flex items-center justify-center gap-[6.1rem] bg-salesforce py-[11.5rem]'>
+    <section className='flex items-center justify-center gap-12 bg-salesforce py-40 mobile:flex-col mobile:gap-0 mobile:py-16 tablet:flex-col tablet:py-32'>
       <Image
         width='19rem'
         height='18.7rem'
@@ -11,10 +11,10 @@ const ServicePartner = () => {
         alt='salesforce 로고'
       />
       <div className='text-center text-common-white'>
-        <h3 className='text-[4rem] font-bold '>
+        <h3 className='title-40 font-bold leading-[4.8rem]'>
           Salesforce 공식 서비스 파트너사
         </h3>
-        <p className='text-[2.8rem] font-light'>
+        <p className='title-28 font-normal leading-[3.3rem]'>
           Salesforce Official Service Partner
         </p>
       </div>
