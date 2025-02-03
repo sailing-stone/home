@@ -24,7 +24,7 @@ const ResponsiveGlobalNavigation = () => {
         type='GNB'
         list={GNB_LIST}
         currentPathname={pathname}
-        className='title-28 flex-col font-bold leading-[1.9rem] mobile:gap-6 tablet:gap-8'
+        className='title-28 flex-col font-bold leading-[1.9rem] mobile:gap-6 tablet:gap-10'
       />
     </nav>
   );

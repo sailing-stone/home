@@ -31,12 +31,12 @@ const Banner = () => {
         preload='auto'
         playsInline
         muted
-        className='max-h-[70rem] w-full object-cover'
+        className='max-h-[70rem] min-h-[50rem] w-full object-cover'
         style={{
           pointerEvents: 'none',
         }}
       />
-      <div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[5rem] font-extrabold leading-[6rem] text-common-white'>
+      <div className='title-50 absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center font-extrabold leading-[6rem] text-common-white'>
         <p
           key={count}
           className='animate-fadeIn text-center'
@@ -44,11 +44,16 @@ const Banner = () => {
           {CONTENT[count]}
         </p>
         <Image
-          width='47rem'
-          height='19rem'
           src={BannerLogoImage}
           alt='로고'
-          className={twJoin('animate-fadeIn', count === 2 ? 'block' : 'hidden')}
+          objectFit='contain'
+          className={twJoin(
+            'animate-fadeIn',
+            'desktop:w-[47rem] desktop:h-[19rem]',
+            'tablet:w-[35rem] aspect-[47/19]',
+            'mobile:w-[25rem] aspect-[47/19]',
+            count === 2 ? 'block' : 'hidden',
+          )}
         />
       </div>
     </section>
