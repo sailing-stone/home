@@ -30,11 +30,25 @@ const Image = ({
 }: Props) => {
   const { ref, loaded } = useLazyLoading({ lazy, threshold });
 
-  const convertedSrc = isDevelopment ? src : `${src}.webp`;
+  let convertedSrc;
 
-  const convertedPlaceholder = isDevelopment
-    ? placeholder
-    : `${placeholder}.webp`;
+  if (isDevelopment) {
+    convertedSrc = src;
+  } else if (src.endsWith('.png')) {
+    convertedSrc = `${src}.webp`;
+  } else {
+    convertedSrc = src;
+  }
+
+  let convertedPlaceholder;
+
+  if (isDevelopment) {
+    convertedPlaceholder = placeholder;
+  } else if (placeholder.endsWith('.png')) {
+    convertedPlaceholder = `${placeholder}.webp`;
+  } else {
+    convertedPlaceholder = placeholder;
+  }
 
   return (
     <img

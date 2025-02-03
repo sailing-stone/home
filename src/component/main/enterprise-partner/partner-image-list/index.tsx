@@ -1,6 +1,6 @@
 import Marquee from 'react-fast-marquee';
 // import AutonicsImage from '@/asset/image/main/autonics.png';
-import Frame from '@/asset/image/main/frame.png';
+import Frame from '@/asset/image/main/frame.jpg';
 // import HanwhaImage from '@/asset/image/main/hanwha.png';
 // import JLRImage from '@/asset/image/main/jlr.png';
 // import KoreaInvestmentImage from '@/asset/image/main/korea-investment.png';
