@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className=' flex flex-col gap-[2.4rem] bg-contrast-200 px-[10.1rem] pb-32 pt-16 mobile:gap-[1.6rem] mobile:px-[2.4rem] mobile:pb-12 mobile:pt-8 tablet:gap-8 tablet:px-[2.4rem] tablet:pb-16 tablet:pt-12'>
       <LogoWithTitle
         src={LogoImage}
-        className='mobile:w-40: h-[5.3rem] w-52 mobile:h-[5.3rem] tablet:h-[5.3rem] tablet:w-40'
+        className='mobile:w-40: h-auto w-52 tablet:w-40'
       />
       <div className='title-16 font-medium leading-[2.4rem] text-text-footer mobile:leading-[2.1rem] tablet:leading-[2.1rem]'>
         <p>(주) 세일링스톤 </p>
