@@ -11,7 +11,7 @@ const ResponsiveGlobalNavigation = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className='absolute left-0 top-[6.5rem] z-10 flex w-screen flex-col border-t-2 bg-common-white py-8 shadow-lg mobile:gap-6 tablet:gap-8'>
+    <nav className='absolute left-0 top-[6.5rem] z-10 flex max-h-[calc(100vh-6.5rem)] w-screen touch-pan-y flex-col overflow-y-auto overscroll-contain border-t-2 bg-common-white py-8 shadow-lg mobile:gap-6 tablet:gap-8'>
       <AccordionTriggerButton
         title='서비스'
         navigationList={SERVICE_NAVIGATION_LIST}

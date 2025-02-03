@@ -24,7 +24,7 @@ const AccordionTriggerButton = ({ title, navigationList }: Props) => {
       defaultVisible
       onToggle={handleToggle}
       header={
-        <div className='title-28 flex items-center gap-4 pl-6 font-bold leading-[1.9rem] text-common-black'>
+        <div className='title-28 flex items-center gap-2 pl-6 font-bold leading-[1.9rem] text-common-black'>
           {title}
           {isToggle ? <Right /> : <Down />}
         </div>
