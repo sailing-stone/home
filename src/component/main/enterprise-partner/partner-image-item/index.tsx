@@ -12,6 +12,7 @@ const PartnerImageItem = ({ src, alt }: Props) => {
         src={src}
         alt={alt}
         lazy={false}
+        objectFit='contain'
       />
     </li>
   );

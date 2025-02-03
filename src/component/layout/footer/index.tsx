@@ -3,7 +3,7 @@ import LogoWithTitle from '@/component/common/logo-with-title';
 
 const Footer = () => {
   return (
-    <footer className=' flex flex-col gap-[2.4rem] bg-contrast-200 px-[10.1rem] pb-32 pt-16 mobile:gap-[1.6rem] mobile:px-[2.4rem] mobile:pb-12 mobile:pt-8 tablet:gap-8 tablet:px-[2.4rem] tablet:pb-16 tablet:pt-12'>
+    <footer className='flex flex-col gap-[2.4rem] bg-contrast-200 px-40 pb-32 pt-16 mobile:gap-[1.6rem] mobile:px-[2.4rem] mobile:pb-12 mobile:pt-8 tablet:gap-8 tablet:px-[2.4rem] tablet:pb-16 tablet:pt-12'>
       <LogoWithTitle
         src={LogoImage}
         className='mobile:w-40: h-auto w-52 tablet:w-40'
