@@ -14,7 +14,7 @@ const ContactSection = () => {
       </p>
       <Link
         to={URL.CONTACT}
-        className='title-20 flex items-center gap-2 rounded-[100rem] bg-common-white px-8 py-[1.4rem] font-bold text-primary-600 mobile:self-end mobile:px-4 mobile:py-2 tablet:self-end tablet:px-[1.6rem] tablet:py-[1.2rem]'
+        className='title-20 flex items-center gap-2 rounded-[100rem] bg-common-white px-8 py-[1.4rem] font-bold text-primary-600 mobile:self-end mobile:px-5 mobile:py-1 tablet:self-end tablet:px-[1.6rem] tablet:py-[1.2rem]'
       >
         <span className='block mobile:hidden'>자세한 사항</span> 문의하기
         <ArrowRight className='mobile:w-[1.2rem] tablet:w-[1.6rem]' />
