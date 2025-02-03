@@ -7,7 +7,7 @@ const Intro = () => {
       <div className='flex flex-col gap-[3.2rem] self-end text-right text-common-black mobile:gap-[1.6rem] mobile:self-center'>
         <h3 className='title-40 font-bold leading-[4.8rem] mobile:leading-[2.9rem] tablet:leading-[4.2rem]'>
           WITH <br />
-          SAILING STONE
+          SAILINGSTONE
         </h3>
         <p className='title-28 font-medium leading-[3.3rem] mobile:leading-[1.9rem] tablet:leading-[2.9rem]'>
           세일링스톤의 데이터 및 AI 솔루션을 통해

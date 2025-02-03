@@ -5,10 +5,10 @@ const ServicePartner = () => {
   return (
     <section className='flex items-center justify-center gap-12 bg-salesforce py-40 mobile:flex-col mobile:gap-0 mobile:py-16 tablet:flex-col tablet:py-32'>
       <Image
-        width='19rem'
-        height='18.7rem'
+        className='h-auto w-[22.2rem]'
         src={SaleforcePartnerImage}
         alt='salesforce 로고'
+        objectFit='contain'
       />
       <div className='text-center text-common-white'>
         <h3 className='title-40 font-bold leading-[4.8rem]'>

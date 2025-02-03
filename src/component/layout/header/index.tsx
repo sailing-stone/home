@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className='fixed z-20 flex h-[6.5rem] w-full items-center justify-between bg-common-white px-40 py-4 shadow-lg mobile:px-[2.4rem] tablet:px-[2.4rem]'>
-      <LogoWithTitle className='h-[4.5rem] w-[10.6rem]' />
+      <LogoWithTitle className='h-auto w-[10.6rem]' />
       {!isMatch && <GlobalNavigation />}
       {isMatch && (
         <NavigationHamburgerButton onClick={handleToggle}>
