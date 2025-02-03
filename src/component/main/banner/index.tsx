@@ -29,8 +29,12 @@ const Banner = () => {
         autoPlay
         loop
         preload='auto'
+        playsInline
         muted
         className='max-h-[70rem] w-full object-cover'
+        style={{
+          pointerEvents: 'none',
+        }}
       />
       <div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[5rem] font-extrabold leading-[6rem] text-common-white'>
         <p
