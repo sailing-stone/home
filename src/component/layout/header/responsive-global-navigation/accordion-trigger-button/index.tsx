@@ -24,16 +24,20 @@ const AccordionTriggerButton = ({ title, navigationList }: Props) => {
       defaultVisible
       onToggle={handleToggle}
       header={
-        <div className='title-28 flex items-center gap-2 pl-6 font-bold leading-[1.9rem] text-common-black'>
-          {title}
-          {isToggle ? <Right /> : <Down />}
+        <div className='title-28 flex items-center justify-center gap-4 pl-6 font-bold text-common-black'>
+          <p>{title}</p>
+          {isToggle ? (
+            <Right className='mobile:h-6' />
+          ) : (
+            <Down className='mobile: w-10' />
+          )}
         </div>
       }
     >
       <NavigationList
         list={navigationList}
         activeText={navigationItem}
-        className='title-26 flex-col py-4 font-medium leading-[1.7rem] mobile:gap-6 tablet:gap-8'
+        className='title-26 flex-col gap-2 pt-4 font-medium'
       />
     </Accordion>
   );
