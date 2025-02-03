@@ -38,7 +38,7 @@ export default {
         contrast: {
           200: '#0B132B',
         },
-        lightGray: '#EEEEEE',
+        enterprisePartner: '#f3fbfb',
         submit: '#212D40',
         consulting: '#212D40',
         tab: '#8E8E8E',
