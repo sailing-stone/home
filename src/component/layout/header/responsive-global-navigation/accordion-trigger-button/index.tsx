@@ -33,7 +33,7 @@ const AccordionTriggerButton = ({ title, navigationList }: Props) => {
       <NavigationList
         list={navigationList}
         activeText={navigationItem}
-        className='title-26 flex-col gap-2 font-medium leading-[1.7rem]'
+        className='title-26 flex-col py-4 font-medium leading-[1.7rem] mobile:gap-6 tablet:gap-8'
       />
     </Accordion>
   );
