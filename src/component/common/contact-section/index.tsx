@@ -4,7 +4,7 @@ import URL from '@/constant/url';
 
 const ContactSection = () => {
   return (
-    <section className='flex items-center justify-between gap-8 rounded-t-2xl bg-contact px-40 py-32 mobile:px-[1.6rem] mobile:py-12 tablet:px-[2.4rem] tablet:py-16'>
+    <section className='flex items-center justify-between gap-[1.4rem] rounded-t-2xl bg-contact px-40 py-32 mobile:px-[1.6rem] mobile:py-12 tablet:px-[2.4rem] tablet:py-16'>
       <p className='title-26 font-medium leading-[3.1rem] text-common-white mobile:leading-[2.1rem] tablet:leading-[2.8rem]'>
         고객의 비즈니스 가치를 극대화하는
         <br className='hidden mobile:block tablet:block' /> 신뢰할 수 있는

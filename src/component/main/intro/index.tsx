@@ -10,7 +10,7 @@ const Intro = () => {
           SAILING STONE
         </h3>
         <p className='title-28 font-medium leading-[3.3rem] mobile:leading-[1.9rem] tablet:leading-[2.9rem]'>
-          세일링 스톤의 데이터 및 AI 솔루션을 통해
+          세일링스톤의 데이터 및 AI 솔루션을 통해
           <br /> 데이터에 대한 투자 성과를 확인해 보세요.
         </p>
       </div>

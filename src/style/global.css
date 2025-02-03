@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@supports (-webkit-appearance: none) {
+  html,
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+}
+
 html {
   font-family: 'Pretendard Variable', 'Pretendard';
   font-size: 62.5%;

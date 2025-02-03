@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className='flex flex-col gap-12 bg-contrast-200 px-[10.1rem] py-[8.5rem] pb-[16.4rem] text-[1.5rem] font-medium text-text-footer'>
       <LogoWithTitle
         src={LogoImage}
-        className='h-[5.5rem] w-[13.1rem]'
+        className='h-[5.3rem] w-52'
       />
       <p>
         (주) 세일링스톤 | 사업자등록번호 : 873-870-1280 | 대표이사 : 강동석,
