@@ -6,7 +6,7 @@ import ServicePartner from '@/component/main/service-partner';
 
 const MainPage = () => {
   return (
-    <div className='pt-[6.2rem]'>
+    <div className='pt-[6.5rem]'>
       <Banner />
       <ServicePartner />
       <Intro />

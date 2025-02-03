@@ -13,7 +13,7 @@ const Header = () => {
   const { isToggle, handleToggle } = useLNBToggle();
 
   return (
-    <header className='fixed z-20 flex w-full items-center justify-between bg-common-white px-40 py-4 shadow-lg mobile:px-[2.4rem] tablet:px-[2.4rem]'>
+    <header className='fixed z-20 flex h-[6.5rem] w-full items-center justify-between bg-common-white px-40 py-4 shadow-lg mobile:px-[2.4rem] tablet:px-[2.4rem]'>
       <LogoWithTitle />
       {!isMatch && <GlobalNavigation />}
       {isMatch && (

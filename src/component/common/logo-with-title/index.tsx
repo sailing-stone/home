@@ -19,6 +19,7 @@ const LogoWithTitle = ({ src, className }: Props) => {
         alt='세일링스톤 로고'
         className={className}
         onClick={() => handleSetNavigationItem('')}
+        objectFit='contain'
       />
     </Link>
   );
