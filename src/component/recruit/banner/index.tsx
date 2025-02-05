@@ -8,8 +8,12 @@ const Banner = () => {
         autoPlay
         loop
         preload='auto'
+        playsInline
         muted
-        className='max-h-[72rem] w-full object-cover'
+        className='max-h-[70rem] min-h-[50rem] w-full object-cover'
+        style={{
+          pointerEvents: 'none',
+        }}
       />
       <div className='absolute bottom-[7.1rem] left-[9.9rem] flex flex-col gap-12'>
         <div>
