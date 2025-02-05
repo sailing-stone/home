@@ -5,13 +5,22 @@ import {
   SERVICE_NAVIGATION_LIST,
   SOLUTION_NAVIGATION_LIST,
 } from '@/constant/navigation-list';
+import useClickAway from '@/hook/useClickAway';
 import AccordionTriggerButton from './accordion-trigger-button';
 
-const ResponsiveGlobalNavigation = () => {
+interface Props {
+  onClickAway: () => void;
+}
+
+const ResponsiveGlobalNavigation = ({ onClickAway }: Props) => {
   const { pathname } = useLocation();
+  const ref = useClickAway(onClickAway);
 
   return (
-    <nav className='absolute left-0 top-[6.5rem] z-10 flex max-h-[calc(100dvh-6.5rem)] w-screen touch-pan-y flex-col gap-6 overflow-y-auto overscroll-contain border-t-2 bg-common-white py-8 shadow-lg'>
+    <nav
+      ref={ref}
+      className='absolute left-0 top-[6.5rem] z-10 flex max-h-[calc(100dvh-6.5rem)] w-screen touch-pan-y flex-col gap-6 overflow-y-auto overscroll-contain border-t-2 bg-common-white py-8 shadow-lg'
+    >
       <AccordionTriggerButton
         title='서비스'
         navigationList={SERVICE_NAVIGATION_LIST}

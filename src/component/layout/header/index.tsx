@@ -21,7 +21,9 @@ const Header = () => {
           {isToggle ? <Hamburger /> : <Delete />}
         </NavigationHamburgerButton>
       )}
-      {isToggle && isMatch && <ResponsiveGlobalNavigation />}
+      {isToggle && isMatch && (
+        <ResponsiveGlobalNavigation onClickAway={handleToggle} />
+      )}
     </header>
   );
 };
