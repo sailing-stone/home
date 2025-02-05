@@ -36,14 +36,14 @@ const CONSULTING_LIST = [
 
 const ConsultingCardList = () => {
   return (
-    <ul className='grid grid-cols-2 gap-[2.2rem] pb-[9.7rem] pt-[12.4rem]'>
+    <ul className='grid grid-cols-2 gap-[2.2rem] pb-[9.7rem] pt-[12.4rem] mobile:flex mobile:flex-col mobile:px-8'>
       {CONSULTING_LIST.map(({ id, src, title, description }, index) => (
         <ConsultingCardItem
           key={id}
           src={src}
           title={title}
           description={description}
-          className={`${index === 1 && 'h-[100rem] justify-end'} ${index === 2 && 'top-[-26rem]'}`}
+          className={`${index === 1 && 'justify-end desktop:h-[100rem]'} ${index === 2 && 'desktop:top-[-26rem]'}`}
         />
       ))}
     </ul>

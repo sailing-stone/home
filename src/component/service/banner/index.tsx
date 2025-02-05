@@ -53,7 +53,7 @@ const Banner = () => {
           pointerEvents: 'none',
         }}
       />
-      <div className='absolute bottom-[6.4rem] left-[9.9rem] flex flex-col gap-[4.5rem]'>
+      <div className='absolute bottom-[6.4rem] left-[9.9rem] flex flex-col gap-[4.5rem] mobile:hidden'>
         <div>
           <p className='text-[3rem] font-medium leading-[3.6rem]'>서비스</p>
           <h1 className='banner-h1'>

@@ -15,7 +15,7 @@ const TBD = () => {
       <Badge>
         <h1
           id='TBD'
-          className='section-title text-common-white'
+          className='title-50 text-common-white'
         >
           Tableau Experties Service
         </h1>
@@ -23,15 +23,13 @@ const TBD = () => {
       <p className='section-description text-common-white'>
         Tableau의 잠재력을 극대화하는 확장 솔루션
       </p>
-      <div className='mt-[10.3rem] flex items-center justify-center gap-[7.4rem]'>
-        <div className='flex basis-[49%] flex-col items-end gap-[4.9rem] py-[4.3rem]'>
+      <div className='mt-[10.3rem] flex items-center justify-center gap-[7.4rem] mobile:flex-col'>
+        <div className='flex basis-[49%] flex-col items-end gap-[4.9rem] py-[4.3rem] mobile:items-center'>
           <Image
-            width='32.2rem'
-            height='7.8rem'
             src={QualificationsImage}
             alt='태블로 자격증들'
           />
-          <p className='text-end text-[4rem] font-light leading-[6rem] text-common-white'>
+          <p className='title-50 text-end font-light leading-[6rem] text-common-white mobile:text-center'>
             <span className='font-bold text-text-highlight'>
               Tableau 공식자격증
             </span>

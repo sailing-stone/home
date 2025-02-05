@@ -25,7 +25,7 @@ const LocalNavigation = () => {
       list={SERVICE_NAVIGATION_LIST}
       activeText={navigationItem}
       className={twJoin(
-        'sticky top-28 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium shadow-lg',
+        'overflow-x-auto flex-nowrap sticky top-[6.5rem] gap-12 bg-common-white px-20 py-10 text-[1.8rem] font-medium shadow-lg',
         isToggle ? 'z-10' : 'z-20',
       )}
     />

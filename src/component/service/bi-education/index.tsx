@@ -10,7 +10,7 @@ const BIEducation = () => {
   return (
     <section
       ref={ref}
-      className='flex flex-col items-center justify-center pb-[26.6rem] pt-[10.7rem]'
+      className='flex flex-col items-center justify-center pb-[26.6rem] pt-[10.7rem] mobile:hidden'
     >
       <Badge>
         <h1

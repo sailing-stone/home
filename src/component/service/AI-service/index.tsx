@@ -7,7 +7,7 @@ const AIService = () => {
   return (
     <section
       ref={ref}
-      className='flex flex-col items-center pb-[32.5rem] pt-[31.1rem]'
+      className='flex flex-col items-center pb-[32.5rem] pt-[31.1rem] mobile:hidden'
     >
       <Badge>
         <h1

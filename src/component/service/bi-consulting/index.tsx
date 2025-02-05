@@ -18,13 +18,13 @@ const BIConsulting = () => {
           BI 컨설팅
         </h1>
       </Badge>
-      <p className='section-description'>
+      <p className='section-description px-8'>
         세일링 스톤은 데이터 분석과 시각화 경험을 바탕으로 고객의 비즈니스
         요구에 맞는 전략적 Tableau 컨설팅을 제공합니다.
       </p>
       <ConsultingCardList />
-      <div className='flex w-full justify-center bg-consulting py-[11.4rem] text-common-white'>
-        <p className='text-center text-[3.5rem] font-medium'>
+      <div className='title-50 flex w-full justify-center bg-consulting py-[11.4rem] text-common-white'>
+        <p className='text-center font-medium'>
           고객의
           <span className='ml-4 font-extrabold text-primary-main'>
             데이터 인프라를 최적화
