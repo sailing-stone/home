@@ -11,6 +11,11 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    assetsInlineLimit: 0,
+  },
   plugins: [
     react(),
     svgr(),
@@ -37,9 +42,6 @@ export default defineConfig({
   ],
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
-  },
-  build: {
-    assetsInlineLimit: 0,
   },
   // server: {
   //   host: '0.0.0.0',
