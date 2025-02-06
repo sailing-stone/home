@@ -8,7 +8,7 @@ const AIPortal = () => {
   return (
     <section
       id='데이터 AI 포털'
-      className='flex flex-col items-center justify-center pb-[21.9rem] pt-[13.3rem]'
+      className='flex flex-col items-center justify-center pb-[21.9rem] pt-[13.3rem] mobile:hidden tablet:hidden'
     >
       <Badge>
         <h1 className='section-title'>데이터 AI 포털</h1>

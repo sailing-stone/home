@@ -21,7 +21,7 @@ const LocalNavigation = () => {
     <NavigationList
       list={SOLUTION_NAVIGATION_LIST}
       activeText={navigationItem}
-      className='sticky top-28 z-10 gap-12 bg-common-white px-40 py-10 text-[1.8rem] font-medium'
+      className='sticky top-[6.5rem] flex-nowrap gap-12 overflow-x-auto bg-common-white px-20 py-10 text-[1.8rem] font-medium shadow-lg'
     />
   );
 };

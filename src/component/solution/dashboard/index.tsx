@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <section
       id='대시보드 on TV'
-      className='flex flex-col items-center justify-center pb-[26rem]'
+      className='flex flex-col items-center justify-center pb-[26rem] mobile:hidden tablet:hidden'
     >
       <Badge>
         <h1 className='section-title'>대시보드 on TV</h1>

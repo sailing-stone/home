@@ -26,7 +26,7 @@ const TBD = () => {
   return (
     <section
       id='웹 / 모바일'
-      className='flex flex-col items-center justify-center bg-contrast-200 pb-[12.9rem] pt-[8.8rem]'
+      className='flex flex-col items-center justify-center bg-contrast-200 pb-[12.9rem] pt-[8.8rem] mobile:hidden tablet:hidden'
     >
       <Badge>
         <h1 className='section-title text-common-white'>
