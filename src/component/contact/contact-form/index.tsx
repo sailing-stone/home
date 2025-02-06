@@ -12,7 +12,7 @@ const ContactForm = () => {
         항목입니다.
       </p>
       <form className='flex flex-col gap-20 pt-[3.3rem]'>
-        <div className='flex gap-8'>
+        <div className='flex gap-8 mobile:flex-col'>
           <Input.Wrapper>
             <Input.Label
               required
@@ -38,7 +38,7 @@ const ContactForm = () => {
             />
           </Input.Wrapper>
         </div>
-        <div className='flex gap-8'>
+        <div className='flex gap-8 mobile:flex-col'>
           <Input.Wrapper>
             <Input.Label htmlFor='부서'>부서</Input.Label>
             <Input.Filed
@@ -54,7 +54,7 @@ const ContactForm = () => {
             />
           </Input.Wrapper>
         </div>
-        <div className='flex gap-8'>
+        <div className='flex gap-8 mobile:flex-col'>
           <Input.Wrapper>
             <Input.Label
               required

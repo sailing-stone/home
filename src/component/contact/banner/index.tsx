@@ -15,15 +15,6 @@ const Banner = () => {
           pointerEvents: 'none',
         }}
       />
-      <div className='absolute bottom-[7.1rem] left-[9.9rem] flex flex-col gap-12'>
-        <div>
-          <p className='text-[3rem] font-medium leading-[3.6rem]'>_</p>
-          <h1 className='banner-h1'>문의하기</h1>
-        </div>
-        <p className='text-[2rem] font-light leading-[3rem]'>
-          파트너십 문의 기타 문의 등등
-        </p>
-      </div>
     </section>
   );
 };

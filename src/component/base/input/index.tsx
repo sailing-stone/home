@@ -23,7 +23,7 @@ const InputFiled = ({ className, ...rest }: FiledProps) => {
     <input
       {...rest}
       className={twMerge(
-        'rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none',
+        'border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none',
         className,
       )}
     />
@@ -37,7 +37,7 @@ const TextareaFiled = ({ className, ...rest }: TextareaProps) => {
     <textarea
       {...rest}
       className={twMerge(
-        'rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none h-[31.4rem] resize-none',
+        'h-[30rem] border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none resize-none',
         className,
       )}
     />

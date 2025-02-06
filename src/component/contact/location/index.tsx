@@ -9,7 +9,7 @@ const Location = () => {
       <Badge>
         <h1 className='section-title'>위치</h1>
       </Badge>
-      <div className='flex gap-[5.3rem] pt-[7.3rem]'>
+      <div className='flex gap-[5.3rem] px-12 pt-[7.3rem] mobile:flex-col'>
         <KakaoMap />
         <div className='flex flex-col gap-32 self-end'>
           <div className='flex flex-col gap-[2.2rem]'>

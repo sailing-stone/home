@@ -22,11 +22,11 @@ const Select = ({ options, onChange }: Props) => {
   };
 
   return (
-    <div className='relative'>
+    <div className='title-20 relative'>
       <button
         type='button'
         onClick={handleToggle}
-        className='flex w-full items-center justify-between rounded-lg bg-lightGray px-4 py-6'
+        className='flex w-full items-center justify-between rounded-lg border px-4 py-6'
       >
         {selected}
         <ArrowDownIcon />
@@ -38,7 +38,7 @@ const Select = ({ options, onChange }: Props) => {
               <button
                 type='button'
                 onClick={() => handleOnClick(option)}
-                className='w-full  bg-common-white px-4 py-6 text-start hover:bg-lightGray'
+                className='w-full bg-common-white px-4 py-6 text-start hover:bg-primary-100'
               >
                 {option}
               </button>
