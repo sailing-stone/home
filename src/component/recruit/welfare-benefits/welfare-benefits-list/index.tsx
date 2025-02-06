@@ -83,7 +83,7 @@ const WELFARE_BENEFITS_LIST = [
 
 const WelfareBenefitsList = () => {
   return (
-    <ul className='grid grid-cols-2 justify-center gap-x-[9.6rem] gap-y-[12.5rem] pt-[17.6rem]'>
+    <ul className='grid grid-cols-2 justify-center gap-x-[9.6rem] gap-y-[12.5rem] px-12 pt-[17.6rem] mobile:flex mobile:flex-col'>
       {WELFARE_BENEFITS_LIST.map((item) => (
         <WelfareBenefitsItem
           key={item.id}

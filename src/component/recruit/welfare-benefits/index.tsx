@@ -7,10 +7,6 @@ const WelfareBenefits = () => {
       <Badge>
         <h1 className='section-title'>복리후생</h1>
       </Badge>
-      <p className='section-description'>
-        Invite shadow community opacity variant. Outline blur subtract content
-        ellipse.
-      </p>
       <WelfareBenefitsList />
     </section>
   );

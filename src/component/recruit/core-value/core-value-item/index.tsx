@@ -10,8 +10,8 @@ interface Props {
 const CoreValueItem = ({ title, description, className }: Props) => {
   return (
     <li className={twMerge('flex flex-col gap-[4.5rem]', className)}>
-      <div className='flex size-[43.6rem] items-center justify-center rounded-[50%] border border-primary-main'>
-        <h3 className='flex size-[36.3rem] items-center justify-center rounded-[50%] bg-primary-main bg-coreValue px-[3.8rem] text-center text-[4rem] font-bold leading-[4.7rem] text-common-white'>
+      <div className='flex size-[43.6rem] items-center justify-center rounded-[50%] border border-primary-main mobile:size-[33.6rem]'>
+        <h3 className='title-50 flex size-[36.3rem] items-center justify-center rounded-[50%] bg-primary-main bg-coreValue px-[3.8rem] text-center font-bold leading-[4.7rem] text-common-white mobile:size-[25.3rem]'>
           {title}
         </h3>
       </div>

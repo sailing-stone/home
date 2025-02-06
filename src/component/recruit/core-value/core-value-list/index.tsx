@@ -50,13 +50,13 @@ const CORE_VALUE_LIST = [
 
 const CoreValueList = () => {
   return (
-    <ul className='m-40 flex'>
+    <ul className='m-40 flex mobile:flex-col mobile:gap-20'>
       {CORE_VALUE_LIST.map(({ id, title, description }, index) => (
         <CoreValueItem
           key={id}
           title={title}
           description={description}
-          className={(index !== 0 && '-ml-[2.5rem]') || undefined}
+          className={(index !== 0 && 'desktop:-ml-[2.5rem]') || undefined}
         />
       ))}
     </ul>
