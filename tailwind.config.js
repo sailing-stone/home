@@ -50,6 +50,9 @@ export default {
         aiPortal:
           'linear-gradient(90deg, #81D8D0 0%, #81D8D0 33.33%, #3abeb0 33.33%, #3abeb0 66.66%, #23726A 66.66%, #23726A 100%)',
       },
+      scale: {
+        60: '0.6',
+      },
       boxShadow: {
         button: '0 4px 10px rgba(0, 0, 0, 0.25)',
       },

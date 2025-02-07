@@ -6,10 +6,12 @@ import {
   SERVICE_NAVIGATION_LIST,
   SOLUTION_NAVIGATION_LIST,
 } from '@/constant/navigation-list';
+import { useLNBToggle } from '@/context/lnb-toggle-context';
 import TriggerButton from './trigger-button';
 
 const GlobalNavigation = () => {
   const { pathname } = useLocation();
+  const { handleSetTrue, handleSetFalse } = useLNBToggle();
   const [activeButton, setActiveButton] = useState('');
 
   const handleOnClick = (
@@ -22,10 +24,12 @@ const GlobalNavigation = () => {
     }
 
     setActiveButton(domain);
+    handleSetTrue();
   };
 
   const handleOnClose = () => {
     setActiveButton('');
+    handleSetFalse();
   };
 
   return (

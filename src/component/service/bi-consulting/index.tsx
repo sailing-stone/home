@@ -13,7 +13,7 @@ const BIConsulting = () => {
       <Badge>
         <h1
           id='consulting'
-          className='section-title'
+          className='title-50 font-bold'
         >
           BI 컨설팅
         </h1>

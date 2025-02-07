@@ -2,31 +2,23 @@ import { Link } from 'react-router-dom';
 import DashboardImage_1 from '@/asset/image/solution/dashboard-bg_1.png';
 import DashboardImage_2 from '@/asset/image/solution/dashboard-bg_2.png';
 import DashboardImage_3 from '@/asset/image/solution/dashboard-bg_3.png';
-import MonitorImage from '@/asset/image/solution/monitor.png';
 import Badge from '@/component/base/badge';
-import Image from '@/component/base/Image';
 import URL from '@/constant/url';
 
 const Dashboard = () => {
   return (
     <section
-      id='대시보드 on TV'
-      className='flex flex-col items-center justify-center pb-[26rem] mobile:hidden tablet:hidden'
+      id='dashboard'
+      className='flex flex-col items-center justify-center pb-[26rem]'
     >
       <Badge>
-        <h1 className='section-title'>대시보드 on TV</h1>
+        <h1 className='title-50 font-bold'>대시보드 on TV</h1>
       </Badge>
       <p className='section-description'>
         실시간 데이터 모니터링의 새로운 차원
       </p>
       <div className='flex items-center  gap-[7.4rem] pb-[15.6rem] pt-[10.7rem]'>
-        <Image
-          width='77.9rem'
-          height='50.5rem'
-          src={MonitorImage}
-          alt='모니터'
-        />
-        <p className='text-[4rem] font-medium leading-[7.5rem]'>
+        <p className='title-40 font-medium leading-[7.5rem]'>
           회의실, 사무실 로비, 공장 현장 등<br />
           <span className='font-black underline decoration-2 underline-offset-8'>
             다양한 장소에서
@@ -43,7 +35,7 @@ const Dashboard = () => {
           할 수 있는 솔루션입니다.
         </p>
       </div>
-      <ul className='flex items-end gap-[2.9rem]'>
+      <ul className='flex items-end gap-[2.9rem] mobile:flex-col tablet:flex-col'>
         <li
           className='flex h-[62.2rem] w-[37rem] flex-col justify-between rounded-[3rem] bg-cover bg-center bg-no-repeat px-[4.4rem] py-[3.9rem]'
           style={{

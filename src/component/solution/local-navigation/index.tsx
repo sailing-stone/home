@@ -1,27 +1,21 @@
+import { twJoin } from 'tailwind-merge';
 import NavigationList from '@/component/common/navigation-list';
-import URL from '@/constant/url';
+import { SOLUTION_NAVIGATION_LIST } from '@/constant/navigation-list';
+import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
-
-const SOLUTION_NAVIGATION_LIST = [
-  { id: 1, text: '데이터 AI 포털', href: URL.SOLUTION },
-  { id: 2, text: '대시보드 on TV', href: URL.SOLUTION },
-  { id: 3, text: 'AI Agent', href: URL.SOLUTION },
-  { id: 4, text: '데이터 프랩', href: URL.SOLUTION },
-  { id: 5, text: 'Stone Excel', href: URL.SOLUTION },
-  { id: 6, text: '웹 / 모바일', href: URL.SOLUTION },
-  { id: 7, text: '커스텀 데이터 커넥터', href: URL.SOLUTION },
-  { id: 8, text: 'RPA', href: URL.SOLUTION },
-  { id: 9, text: 'Tableau Extension', href: URL.SOLUTION },
-];
 
 const LocalNavigation = () => {
   const { navigationItem } = useLocalNavigation();
+  const { isToggle } = useLNBToggle();
 
   return (
     <NavigationList
       list={SOLUTION_NAVIGATION_LIST}
       activeText={navigationItem}
-      className='sticky top-[6.5rem] flex-nowrap gap-12 overflow-x-auto bg-common-white px-20 py-10 text-[1.8rem] font-medium shadow-lg'
+      className={twJoin(
+        'overflow-x-auto flex-nowrap sticky top-[6.5rem] gap-12 bg-common-white px-20 py-10 text-[1.8rem] font-medium shadow-lg',
+        isToggle ? 'z-10' : 'z-20',
+      )}
     />
   );
 };

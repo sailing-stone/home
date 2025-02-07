@@ -50,7 +50,7 @@ const TriggerButton = ({
         list={navigationList}
         activeText={navigationItem}
         className={twJoin(
-          'shadow-lg absolute left-0 top-20 z-10 flex-col items-start gap-6 text-nowrap rounded-[2rem] bg-common-white p-8',
+          'z-10 shadow-lg absolute left-0 top-20 flex-col items-start gap-6 text-nowrap rounded-[2rem] bg-common-white p-8',
           isActive ? 'flex' : 'hidden',
         )}
       />

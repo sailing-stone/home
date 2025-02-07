@@ -1,3 +1,4 @@
+import { twJoin } from 'tailwind-merge';
 import Hamburger from '@/component/common/icon/delete.svg?react';
 import Delete from '@/component/common/icon/hamburger.svg?react';
 import LogoWithTitle from '@/component/common/logo-with-title';
@@ -13,7 +14,12 @@ const Header = () => {
   const { isToggle, handleToggle } = useLNBToggle();
 
   return (
-    <header className='fixed z-20 flex h-[6.5rem] w-full items-center justify-between bg-common-white px-40 py-4 shadow-lg mobile:px-[2.4rem] tablet:px-[2.4rem]'>
+    <header
+      className={twJoin(
+        'fixed z-20 flex h-[6.5rem] w-full items-center justify-between bg-common-white px-40 py-4 mobile:px-[2.4rem] tablet:px-[2.4rem]',
+        !isToggle && 'shadow-lg',
+      )}
+    >
       <LogoWithTitle className='h-auto w-[10.6rem]' />
       {!isMatch && <GlobalNavigation />}
       {isMatch && (

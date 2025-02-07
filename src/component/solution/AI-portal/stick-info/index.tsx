@@ -2,7 +2,7 @@ import PlusIcon from '@/component/common/icon/plus-icon';
 
 const StickInfo = () => {
   return (
-    <div className='mb-[4.6rem] mt-[11.7rem] flex items-center justify-center rounded-[8rem] bg-aiPortal text-center text-[2.4rem] font-semibold leading-[3rem] text-common-white'>
+    <div className='mb-[4.6rem] mt-[11.7rem] flex items-center justify-center rounded-[8rem] bg-aiPortal text-center text-[2.4rem] font-semibold leading-[3rem] text-common-white mobile:hidden tablet:hidden'>
       <p className='pl-40 pr-20'>
         다양한 데이터와 비즈니스별
         <br />
