@@ -25,7 +25,9 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build
+        run: |
+          export PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+          yarn build  # 빌드 실행
 
       - name: Copy build files
         run: |
