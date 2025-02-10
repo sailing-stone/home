@@ -75,9 +75,9 @@ body {
     @apply text-[1.8rem] tablet:text-[1.2rem] mobile:text-[1.2rem];
   }
   .body-20 {
-    @apply text-[2rem] tablet:text-[1.4rem] mobile-text-[1.2rem];
+    @apply text-[2rem] tablet:text-[1.4rem] mobile:text-[1.2rem];
   }
   .body-32 {
-    @apply text-[3.2rem] tablet:text-[2rem] mobile-text-[1.4rem];
+    @apply text-[3.2rem] tablet:text-[2rem] mobile:text-[1.4rem];
   }
 }
