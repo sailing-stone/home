@@ -20,6 +20,13 @@ export default {
           700: '#1da190',
           800: '#0D8384',
         },
+        gray: {
+          100: '#EEEEEE',
+          200: '#DDDDDD',
+          300: '#CCCCCC',
+          400: '#BBBBBB',
+          500: '#AAAAAA',
+        },
         common: {
           white: '#FFFFFF',
           black: '#000000',
@@ -34,6 +41,8 @@ export default {
         },
       },
       backgroundColor: {
+        dark: '#0B132B',
+        dark2: '#212D40',
         header: '#c0c1c3',
         contrast: {
           200: '#0B132B',
@@ -49,9 +58,6 @@ export default {
         coreValue: 'linear-gradient(140deg, #B8E9E4 20%, #81D8D0 50%)',
         aiPortal:
           'linear-gradient(90deg, #81D8D0 0%, #81D8D0 33.33%, #3abeb0 33.33%, #3abeb0 66.66%, #23726A 66.66%, #23726A 100%)',
-      },
-      scale: {
-        60: '0.6',
       },
       boxShadow: {
         button: '0 4px 10px rgba(0, 0, 0, 0.25)',
