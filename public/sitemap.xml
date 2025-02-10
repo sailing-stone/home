@@ -9,7 +9,28 @@
 
 <url>
   <loc>https://new.sailingstone.io/</loc>
-  <lastmod>2025-02-06T02:08:04+00:00</lastmod>
+  <lastmod>2025-02-10T07:06:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://new.sailingstone.io/service</loc>
+  <lastmod>2025-02-10T07:06:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://new.sailingstone.io/solution</loc>
+  <lastmod>2025-02-10T07:06:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://new.sailingstone.io/recruit</loc>
+  <lastmod>2025-02-10T07:06:22+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://new.sailingstone.io/contact</loc>
+  <lastmod>2025-02-10T07:06:22+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
