@@ -1,4 +1,5 @@
 import * as path from 'path';
+import prerender from '@prerenderer/rollup-plugin';
 import viteImagemin from '@vheemstra/vite-plugin-imagemin';
 import react from '@vitejs/plugin-react';
 import imageminGifsicle from 'imagemin-gifsicle';
@@ -18,6 +19,14 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    prerender({
+      routes: ['/', '/service', '/solution', '/recruit', '/contact'],
+      renderer: '@prerenderer/renderer-puppeteer',
+      rendererOptions: {
+        maxConcurrentRoutes: 1,
+        renderAfterTime: 500,
+      },
+    }),
     svgr(),
     viteCompression({
       algorithm: 'gzip',
