@@ -49,7 +49,7 @@ const BIConsulting = () => {
           <ConsultingCardList />
         </Marquee>
       </VisibleGuard>
-      <div className='flex w-full justify-center bg-consulting px-20 py-40 mobile:py-14 tablet:py-28'>
+      <div className='flex w-full justify-center bg-consulting px-20 py-40 mobile:px-12 mobile:py-14 tablet:py-28'>
         <Text
           as='p'
           variant='body32'
