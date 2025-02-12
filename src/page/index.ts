@@ -4,3 +4,4 @@ export { default as RecruitPage } from './recruit';
 export { default as ContactPage } from './contact';
 export { default as SolutionPage } from './solution';
 export { default as Router } from './router';
+export { default as IntroducePage } from './introduce';

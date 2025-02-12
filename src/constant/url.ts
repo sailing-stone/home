@@ -4,6 +4,7 @@ const URL = {
   SOLUTION: '/solution',
   RECRUIT: '/recruit',
   CONTACT: '/contact',
+  INTRODUCE: '/introduce',
 };
 
 export default URL;

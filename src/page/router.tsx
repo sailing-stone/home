@@ -25,6 +25,10 @@ const Router = () => {
         path={URL.SOLUTION}
         element={<Pages.SolutionPage />}
       />
+      <Route
+        path={URL.INTRODUCE}
+        element={<Pages.IntroducePage />}
+      />
     </Routes>
   );
 };
