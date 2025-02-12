@@ -13,6 +13,7 @@ const PartnerImageList = () => {
       <Image
         src={Frame}
         alt='alt'
+        lazy={false}
         objectFit='contain'
         className='h-12 w-auto'
       />
