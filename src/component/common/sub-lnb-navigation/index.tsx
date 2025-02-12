@@ -24,6 +24,8 @@ const SubLNBNavigation = ({ navigationList }: Props) => {
         'overflow-x-auto flex-nowrap sticky top-[6.5rem] gap-12 bg-common-white px-[10rem] tablet:px-[2.4rem] mobile:px-[1.6rem] py-[2rem] shadow-lg',
         isToggle ? 'z-10' : 'z-20',
       )}
+      variant='title16'
+      strong={500}
     />
   );
 };

@@ -11,6 +11,8 @@ interface Props {
   text: string;
   isActive?: boolean;
   isCurrentPath?: boolean;
+  variant: string;
+  strong: number;
 }
 
 const NavigationItem = ({
@@ -20,6 +22,8 @@ const NavigationItem = ({
   text,
   isActive,
   isCurrentPath,
+  variant,
+  strong,
 }: Props) => {
   const { handleSetNavigationItem } = useLocalNavigation();
   const { handleSetFalse } = useLNBToggle();
@@ -37,9 +41,7 @@ const NavigationItem = ({
   };
 
   const className = twJoin(
-    'shrink-0 text-common-black hover:text-primary-main',
-    type === 'LNB' &&
-      'hover:underline hover:underline-offset-4 hover:decoration-2',
+    'shrink-0 hover:text-primary-main hover:underline hover:underline-offset-4 hover:decoration-2',
     type === 'LNB' && isActive && 'text-primary-main',
     type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
@@ -52,8 +54,8 @@ const NavigationItem = ({
       >
         <Text
           as='p'
-          variant='title16'
-          strong={500}
+          variant={variant}
+          strong={strong}
           underline={type === 'LNB' && isActive}
           className={className}
         >

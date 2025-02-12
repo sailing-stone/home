@@ -33,7 +33,7 @@ const GlobalNavigation = () => {
   };
 
   return (
-    <nav className='title-16 relative flex gap-20 font-medium leading-[1.9rem]'>
+    <nav className='relative flex gap-20'>
       <TriggerButton
         title='서비스'
         isActive={activeButton === '서비스'}
@@ -52,6 +52,9 @@ const GlobalNavigation = () => {
         type='GNB'
         list={GNB_LIST}
         currentPathname={pathname}
+        variant='title16'
+        strong={500}
+        className='gap-20'
       />
     </nav>
   );

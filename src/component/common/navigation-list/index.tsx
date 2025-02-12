@@ -8,17 +8,27 @@ interface Props {
   className?: string;
   activeText?: string;
   currentPathname?: string;
+  variant: string;
+  strong: number;
 }
 
 const NavigationList = forwardRef(
   (
-    { type = 'LNB', list, className, activeText, currentPathname }: Props,
+    {
+      type = 'LNB',
+      list,
+      className,
+      activeText,
+      currentPathname,
+      variant,
+      strong,
+    }: Props,
     ref?: ForwardedRef<HTMLUListElement>,
   ) => {
     return (
       <ul
         ref={ref}
-        className={twMerge('flex items-center gap-[5rem]', className)}
+        className={twMerge('flex gap-[2rem]', className)}
       >
         {list.map(({ id, hash, href, text }) => (
           <NavigationItem
@@ -29,6 +39,8 @@ const NavigationList = forwardRef(
             text={text}
             isActive={activeText === text}
             isCurrentPath={currentPathname === href}
+            variant={variant}
+            strong={strong}
           />
         ))}
       </ul>

@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react';
 import { twJoin } from 'tailwind-merge';
+import Text from '@/component/base/text';
 import Down from '@/component/common/icon/down.svg?react';
 import NavigationList from '@/component/common/navigation-list';
 import { useLocalNavigation } from '@/context/local-navigation-context';
@@ -35,20 +36,26 @@ const TriggerButton = ({
   return (
     <button
       type='button'
-      className={twJoin(
-        'relative flex shrink-0 items-center gap-[0.7rem]',
-        isActive ? 'text-primary-main' : 'text-common-black',
-      )}
+      className='relative flex shrink-0 items-center gap-[0.7rem]'
       onClick={(event: MouseEvent<HTMLButtonElement>) => {
         onClick(event, title);
       }}
     >
-      {title}
+      <Text
+        as='h3'
+        variant='title16'
+        strong={500}
+        className={isActive ? 'text-primary-main' : 'text-common-black'}
+      >
+        {title}
+      </Text>
       <Down />
       <NavigationList
         ref={ref}
         list={navigationList}
         activeText={navigationItem}
+        variant='title16'
+        strong={500}
         className={twJoin(
           'z-10 shadow-lg absolute left-0 top-20 flex-col items-start gap-6 text-nowrap rounded-[2rem] bg-common-white p-8',
           isActive ? 'flex' : 'hidden',
