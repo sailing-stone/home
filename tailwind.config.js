@@ -26,6 +26,7 @@ export default {
           300: '#CCCCCC',
           400: '#BBBBBB',
           500: '#AAAAAA',
+          600: '#F2F2F7',
         },
         common: {
           white: '#FFFFFF',

@@ -1,4 +1,7 @@
-import EducationPointItem from '../education-point-item';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider, { Settings } from 'react-slick';
+import MobileEducationPointItem from '../mobile-education-point-item';
 
 const EDUCATION_POINT_LIST = [
   {
@@ -48,19 +51,33 @@ const EDUCATION_POINT_LIST = [
   },
 ];
 
-const EducationPointList = () => {
+const settings: Settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+};
+
+const TypedSlider = Slider as unknown as React.FC<any>;
+
+const MobileEducationPointList = () => {
   return (
-    <ul className='flex gap-12 rounded-[20rem] border border-primary-main p-8 tablet:gap-4'>
+    <TypedSlider
+      {...settings}
+      className='h-auto w-full'
+    >
       {EDUCATION_POINT_LIST.map(({ id, title, description }, index) => (
-        <EducationPointItem
+        <MobileEducationPointItem
           key={id}
           title={title}
           description={description}
           index={index + 1}
         />
       ))}
-    </ul>
+    </TypedSlider>
   );
 };
 
-export default EducationPointList;
+export default MobileEducationPointList;

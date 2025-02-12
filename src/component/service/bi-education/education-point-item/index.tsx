@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Text from '@/component/base/text';
 
 interface Props {
   index: number;
@@ -8,18 +9,35 @@ interface Props {
 
 const EducationPointItem = ({ index, title, description }: Props) => {
   return (
-    <li className='flex size-[36rem] flex-col items-center gap-12 rounded-[50%] border border-dotted border-border-education px-14 py-[5.9rem]'>
+    <li className='flex size-[32rem] flex-col items-center gap-10 rounded-[50%] border border-dashed border-border-education px-12 py-24 tablet:size-[21rem] tablet:gap-6 tablet:px-6 tablet:py-[2.6rem]'>
       <div className='flex flex-col items-center gap-[0.8rem]'>
-        <p className='text-[2rem] font-black leading-[2.3rem] text-primary-main'>
+        <Text
+          as='p'
+          variant='title16'
+          strong={900}
+          className='text-primary-main'
+        >
           Point {index}.
-        </p>
-        <h3 className='text-center text-[3.2rem] font-bold leading-[4.3rem] text-common-black'>
+        </Text>
+        <Text
+          as='h3'
+          variant='title26'
+          strong={700}
+          align='center'
+          className='leading-[3.4rem] text-common-black tablet:leading-[2.3rem]'
+        >
           {title}
-        </h3>
+        </Text>
       </div>
-      <p className='text-center text-[1.8rem] font-normal leading-[2.3rem] text-common-black'>
+      <Text
+        as='p'
+        variant='body18'
+        strong={400}
+        align='center'
+        className='leading-[2.3rem] text-common-black tablet:leading-[1.8rem]'
+      >
         {description}
-      </p>
+      </Text>
     </li>
   );
 };

@@ -81,7 +81,7 @@ const textVariant = cva('', {
   },
   defaultVariants: {
     variant: 'body',
-    align: 'center',
+    align: 'left',
     underline: false,
     strong: 400,
   },

@@ -1,3 +1,5 @@
+import Text from '@/component/base/text';
+
 interface Props {
   title: string;
   description: string;
@@ -5,13 +7,23 @@ interface Props {
 
 const TBDInfoItem = ({ title, description }: Props) => {
   return (
-    <li className='flex flex-col gap-[0.4rem]'>
-      <h3 className='title-50 font-bold leading-[3.8rem] text-text-highlight'>
+    <li className='flex flex-col gap-4'>
+      <Text
+        as='h3'
+        variant='title30'
+        strong={700}
+        className='text-text-highlight'
+      >
         {title}
-      </h3>
-      <p className='mobile:title-32 font-normal leading-[2.4rem] text-common-white'>
+      </Text>
+      <Text
+        as='p'
+        variant='body20'
+        strong={400}
+        className='text-common-white'
+      >
         {description}
-      </p>
+      </Text>
     </li>
   );
 };

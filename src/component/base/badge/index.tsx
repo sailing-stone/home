@@ -12,7 +12,7 @@ const Badge = ({ children, className, ...rest }: Props) => {
       {children}
       <sub
         className={twMerge(
-          'absolute top-4 left-[-3rem] size-8 rounded-[50%] bg-primary-main',
+          'absolute top-[0.5rem] left-[-1.5rem] size-[1.2rem] rounded-[50%] bg-primary-main',
           className,
         )}
         {...rest}

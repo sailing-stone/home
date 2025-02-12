@@ -8,7 +8,7 @@ import BannerVideo from '@/asset/video/solution-banner.mp4';
 //     description: (
 //       <>
 //         <p>
-//           세일링 스톤은 Tableau를 통해 직관적인 데이터 인사이트를 제공하는
+//           세일링스톤은 Tableau를 통해 직관적인 데이터 인사이트를 제공하는
 //           전문가 팀입니다.
 //         </p>
 //         <p>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
+import Text from '@/component/base/text';
 import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
@@ -39,19 +40,25 @@ const NavigationItem = ({
     'shrink-0 text-common-black hover:text-primary-main',
     type === 'LNB' &&
       'hover:underline hover:underline-offset-4 hover:decoration-2',
-    type === 'LNB' &&
-      isActive &&
-      'text-primary-main underline underline-offset-4 decoration-2',
+    type === 'LNB' && isActive && 'text-primary-main',
     type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
 
   return (
-    <li className={className}>
+    <li className='shrink-0'>
       <Link
         to={{ pathname: href, hash }}
         onClick={handleNavigate}
       >
-        {text}
+        <Text
+          as='p'
+          variant='title16'
+          strong={500}
+          underline={type === 'LNB' && isActive}
+          className={className}
+        >
+          {text}
+        </Text>
       </Link>
     </li>
   );
