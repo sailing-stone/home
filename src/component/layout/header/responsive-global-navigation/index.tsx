@@ -4,7 +4,7 @@ import NavigationList from '@/component/common/navigation-list';
 import {
   GNB_LIST,
   SERVICE_NAVIGATION_LIST,
-  SOLUTION_NAVIGATION_LIST,
+  // SOLUTION_NAVIGATION_LIST,
 } from '@/constant/navigation-list';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 import useClickAway from '@/hook/useClickAway';
@@ -39,8 +39,8 @@ const ResponsiveGlobalNavigation = ({ onClickAway }: Props) => {
           strong={500}
         />
       </div>
-      <div className='flex flex-col gap-4'>
-        <Text
+      {/* <div className='flex flex-col gap-4'> */}
+      {/* <Text
           as='h3'
           variant='title26'
           strong={700}
@@ -53,8 +53,8 @@ const ResponsiveGlobalNavigation = ({ onClickAway }: Props) => {
           className='flex-col gap-[1.7rem] pl-8 text-gray-500'
           variant='title20'
           strong={500}
-        />
-      </div>
+        /> */}
+      {/* </div> */}
       <NavigationList
         type='GNB'
         list={GNB_LIST}

@@ -28,9 +28,7 @@ const TriggerButton = ({
 }: Props) => {
   const { navigationItem } = useLocalNavigation();
   const ref = useClickAway<HTMLUListElement>(() => {
-    if (!isActive) {
-      onClose();
-    }
+    onClose();
   });
 
   return (
@@ -49,7 +47,7 @@ const TriggerButton = ({
       >
         {title}
       </Text>
-      <Down />
+      <Down className={twJoin(isActive && 'text-primary-main')} />
       <NavigationList
         ref={ref}
         list={navigationList}

@@ -4,7 +4,7 @@ import NavigationList from '@/component/common/navigation-list';
 import {
   GNB_LIST,
   SERVICE_NAVIGATION_LIST,
-  SOLUTION_NAVIGATION_LIST,
+  // SOLUTION_NAVIGATION_LIST,
 } from '@/constant/navigation-list';
 import { useLNBToggle } from '@/context/lnb-toggle-context';
 import TriggerButton from './trigger-button';
@@ -41,13 +41,13 @@ const GlobalNavigation = () => {
         onClick={handleOnClick}
         onClose={handleOnClose}
       />
-      <TriggerButton
+      {/* <TriggerButton
         title='솔루션'
         isActive={activeButton === '솔루션'}
         navigationList={SOLUTION_NAVIGATION_LIST}
         onClick={handleOnClick}
         onClose={handleOnClose}
-      />
+      /> */}
       <NavigationList
         type='GNB'
         list={GNB_LIST}
