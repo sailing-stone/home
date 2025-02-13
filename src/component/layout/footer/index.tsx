@@ -5,7 +5,7 @@ import LogoWithTitle from '@/component/common/logo-with-title';
 const Footer = () => {
   const { pathname } = useLocation();
 
-  if (pathname !== '/' && pathname !== '/service') {
+  if (pathname !== '/' && pathname !== '/service' && pathname !== '/contact') {
     return null;
   }
 

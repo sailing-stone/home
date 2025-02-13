@@ -1,10 +1,19 @@
+import Text from '@/component/base/text';
+
 const ContactSubmitButton = () => {
   return (
     <button
       type='button'
-      className='mt-[4.4rem] w-[31rem] self-center rounded-[2.8rem] bg-submit px-48 py-[1.7rem] text-[2rem] font-semibold leading-[2.4rem] text-common-white shadow-button'
+      className='shrink-0 rounded-[2.8rem] bg-submit px-48 py-6 shadow-button mobile:px-[4.6rem] mobile:py-4'
     >
-      문의하기
+      <Text
+        as='p'
+        variant='title20'
+        strong={600}
+        className='text-common-white'
+      >
+        문의하기
+      </Text>
     </button>
   );
 };

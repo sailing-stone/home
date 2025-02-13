@@ -16,7 +16,9 @@ type TagVariants =
 type TextVariants =
   | 'title'
   | 'title16'
+  | 'title18'
   | 'title20'
+  | 'title24'
   | 'title26'
   | 'title28'
   | 'title30'
@@ -45,7 +47,9 @@ const textVariant = cva('', {
     variant: {
       title: 'text-[7rem] mobile:text-[3rem] tablet:text-[4.5rem]',
       title16: 'text-[1.6rem] mobile:text-[1.2rem] tablet:text-[1.4rem]',
+      title18: 'text-[1.8rem] mobile:text-[1.2rem] tablet:text-[1.8rem]',
       title20: 'text-[2rem] mobile:text-[1.2rem] tablet:text-[1.6rem]',
+      title24: 'text-[2.4rem] mobile:text-[1.4rem] tablet:text-[1.6rem]',
       title26: 'text-[2.6rem] mobile:text-[1.4rem] tablet:text-[2rem]',
       title28: 'text-[2.8rem] mobile:text-[1.6rem] tablet:text-[2.4rem]',
       title30: 'text-[3rem] mobile:text-[1.8rem] tablet:text-[2rem]',

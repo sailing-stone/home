@@ -28,3 +28,8 @@ export const GNB_LIST = [
   { id: 2, href: URL.RECRUIT, text: '리쿠르트' },
   { id: 3, href: URL.CONTACT, text: '문의' },
 ];
+
+export const CONTACT_NAVIGATION_LIST = [
+  { id: 1, hash: 'contact', text: '문의하기', href: URL.CONTACT },
+  { id: 2, hash: 'location', text: '찾아오시는 길', href: URL.CONTACT },
+];

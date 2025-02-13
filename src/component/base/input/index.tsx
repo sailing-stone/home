@@ -1,5 +1,6 @@
 import { ComponentProps, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Text from '../text';
 
 interface WrapperProps extends ComponentProps<'div'> {
   children: ReactNode;
@@ -8,7 +9,7 @@ interface WrapperProps extends ComponentProps<'div'> {
 const InputWrapper = ({ children, className, ...rest }: WrapperProps) => {
   return (
     <div
-      className={twMerge('flex flex-col gap-[0.5rem] basis-1/2', className)}
+      className={twMerge('flex flex-col gap-[0.5rem]', className)}
       {...rest}
     >
       {children}
@@ -23,7 +24,7 @@ const InputFiled = ({ className, ...rest }: FiledProps) => {
     <input
       {...rest}
       className={twMerge(
-        'border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none',
+        'border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1rem] outline-none text-[1.6rem]',
         className,
       )}
     />
@@ -37,7 +38,7 @@ const TextareaFiled = ({ className, ...rest }: TextareaProps) => {
     <textarea
       {...rest}
       className={twMerge(
-        'h-[30rem] border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1.5rem] outline-none resize-none',
+        'border rounded-[0.5rem] bg-lightGray px-[1rem] py-[1rem] outline-none resize-none text-[1.6rem]',
         className,
       )}
     />
@@ -47,6 +48,7 @@ const TextareaFiled = ({ className, ...rest }: TextareaProps) => {
 interface LabelProps extends ComponentProps<'label'> {
   children: ReactNode;
   required?: boolean;
+  variant: string;
 }
 
 const InputLabel = ({
@@ -54,21 +56,23 @@ const InputLabel = ({
   children,
   required,
   className,
+  variant,
   ...rest
 }: LabelProps) => {
   return (
     <label
       htmlFor={htmlFor}
-      className={twMerge(
-        'flex gap-[0.5rem] font-medium text-[2rem] leading-[2.4rem]',
-        className,
-      )}
+      className={twMerge('flex gap-[0.5rem]', className)}
       {...rest}
     >
-      {children}
-      {required && (
-        <span className='font-bold leading-[2.4rem] text-primary-main'>*</span>
-      )}
+      <Text
+        as='p'
+        variant={variant}
+        strong={700}
+      >
+        {children}
+      </Text>
+      {required && <span className='text-[1.6rem] text-primary-main'>*</span>}
     </label>
   );
 };

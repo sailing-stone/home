@@ -1,40 +1,95 @@
+import Map from '@/asset/image/contact/map.png';
 import Badge from '@/component/base/badge';
-import MailIcon from '@/component/common/icon/mail-icon';
-import PhoneIcon from '@/component/common/icon/phone-icon';
-import KakaoMap from './kakao-map';
+import Image from '@/component/base/Image';
+import Text from '@/component/base/text';
+import Mail from '@/component/common/icon/mail.svg?react';
+import Phone from '@/component/common/icon/phone.svg?react';
+import Print from '@/component/common/icon/print.svg?react';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 
 const Location = () => {
+  const ref = useIntersectingNavigation('찾아오시는 길');
+
   return (
-    <section className='flex flex-col items-center justify-center pb-[33.2rem]'>
+    <section
+      ref={ref}
+      id='location'
+      className='flex flex-col items-center justify-center gap-40 pb-60 mobile:gap-20 mobile:pb-40 tablet:gap-32 tablet:pb-52'
+    >
       <Badge>
-        <h1 className='section-title'>위치</h1>
+        <Text
+          as='h1'
+          variant='title70'
+          strong={700}
+        >
+          찾아오시는 길
+        </Text>
       </Badge>
-      <div className='flex gap-[5.3rem] px-12 pt-[7.3rem] mobile:flex-col'>
-        <KakaoMap />
-        <div className='flex flex-col gap-32 self-end'>
-          <div className='flex flex-col gap-[2.2rem]'>
-            <h3 className='text-[2.4rem] font-bold leading-[2.9rem]'>주소</h3>
-            <p className='text-[2rem] font-normal leading-[2.4rem]'>
-              서울특별시 강서구 마곡중앙로 161-8 두산더랜드파크 B동 13층
-            </p>
+      <div className='flex gap-12 px-[2.4rem] mobile:flex-col tablet:gap-[2.4rem]'>
+        <Image
+          src={Map}
+          alt='세일링스톤 위치'
+          objectFit='cover'
+          className='h-[41rem] w-[54rem] mobile:size-[28.8rem] tablet:size-[34.8rem]'
+        />
+        <div className='flex flex-col gap-32 self-end mobile:gap-12 mobile:self-start tablet:gap-20'>
+          <div className='flex flex-col gap-8 mobile:gap-4 tablet:gap-4'>
+            <Text
+              as='h3'
+              variant='title24'
+              strong={700}
+            >
+              주소
+            </Text>
+            <Text
+              as='p'
+              variant='body20'
+              strong={400}
+            >
+              서울특별시 강서구 마곡중앙로 161-8
+              <br className='hidden mobile:block' /> 두산더랜드파크 B동 13층
+            </Text>
           </div>
-          <div className='flex flex-col gap-[2.2rem]'>
-            <h3 className='text-[2.4rem] font-bold leading-[2.9rem]'>연락처</h3>
-            <div className='flex gap-[1.3rem]'>
-              <div className='pt-[1.3rem]'>
-                <PhoneIcon />
-              </div>
-              <div className='text-[2rem] font-normal leading-[4rem]'>
-                <p>02 - 2039 - 9268</p>
-                <p>0505 - 300 - 9238</p>
-              </div>
-            </div>
-            <div className='flex items-center gap-[1.3rem]'>
-              <MailIcon />
-              <p className='text-[2rem] font-normal leading-[4rem]'>
-                dskang@sailingstone.io
-              </p>
-            </div>
+          <div className='flex flex-col gap-8 mobile:gap-4 tablet:gap-4'>
+            <Text
+              as='h3'
+              variant='title24'
+              strong={700}
+            >
+              연락처
+            </Text>
+            <ul className='flex flex-col gap-6 mobile:gap-6 tablet:gap-6'>
+              <li className='flex items-center gap-4'>
+                <Phone className='size-[2.4rem] mobile:size-[1.1rem] tablet:size-[1.8rem]' />
+                <Text
+                  as='p'
+                  variant='body20'
+                  strong={400}
+                >
+                  02 - 2039 - 9268
+                </Text>
+              </li>
+              <li className='flex items-center gap-4'>
+                <Print className='size-[2.4rem] mobile:size-[1.1rem] tablet:size-[1.8rem]' />
+                <Text
+                  as='p'
+                  variant='body20'
+                  strong={400}
+                >
+                  0505 - 300 - 9238
+                </Text>
+              </li>
+              <li className='flex items-center gap-4'>
+                <Mail className='size-[2.4rem] mobile:size-[1.1rem] tablet:size-[1.8rem]' />
+                <Text
+                  as='p'
+                  variant='body20'
+                  strong={400}
+                >
+                  dskang@sailingstone.io
+                </Text>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
