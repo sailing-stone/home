@@ -3,7 +3,7 @@ import Map from '@/asset/image/contact/map.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
 import Text from '@/component/base/text';
-import Mail from '@/component/common/icon/mail.svg?react';
+// import Mail from '@/component/common/icon/mail.svg?react';
 import Phone from '@/component/common/icon/phone.svg?react';
 import Print from '@/component/common/icon/print.svg?react';
 import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
@@ -85,7 +85,7 @@ const Location = () => {
                   0505 - 300 - 9238
                 </Text>
               </li>
-              <li className='flex items-center gap-4'>
+              {/* <li className='flex items-center gap-4'>
                 <Mail className='size-[2.4rem] mobile:size-[1.1rem] tablet:size-[1.8rem]' />
                 <Text
                   as='p'
@@ -94,7 +94,7 @@ const Location = () => {
                 >
                   dskang@sailingstone.io
                 </Text>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
