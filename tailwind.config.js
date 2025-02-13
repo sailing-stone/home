@@ -58,7 +58,7 @@ export default {
         contact: 'linear-gradient(90deg, #81D8D0, #6fd4de)',
         coreValue: 'linear-gradient(140deg, #B8E9E4 20%, #81D8D0 50%)',
         aiPortal:
-          'linear-gradient(90deg, #81D8D0 0%, #81D8D0 33.33%, #3abeb0 33.33%, #3abeb0 66.66%, #23726A 66.66%, #23726A 100%)',
+          'linear-gradient(90deg, #81D8D0 0%, #81D8D0 35%, #3abeb0 35%, #3abeb0 72%, #23726A 72%, #23726A 100%)',
         solutionPartner:
           'linear-gradient(180deg, #FFFFFF 3%, #e6f7f6 20%, #e6f7f6 40%, #FFFFFF 95%)',
       },

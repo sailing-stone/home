@@ -23,7 +23,7 @@ const INFO_LIST = [
 
 const InfoList = () => {
   return (
-    <ul className='flex max-w-[116.8rem] flex-col gap-44 pt-[16.1rem]'>
+    <ul className='flex max-w-[116.8rem] flex-col gap-44 pt-20'>
       {INFO_LIST.map(({ id, title, description }, index) => (
         <InfoItem
           key={id}

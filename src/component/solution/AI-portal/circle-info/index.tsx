@@ -1,26 +1,59 @@
+import Text from '@/component/base/text';
+
 const CircleInfo = () => {
   return (
-    <div className='mt-12 flex text-center text-[3rem] font-medium leading-[4.5rem] text-common-black mobile:hidden'>
-      <div className='flex size-[44.4rem] translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 mix-blend-multiply'>
-        <div className='flex size-[40.8rem] items-center justify-center rounded-[50%] border-2 border-dotted border-primary-main'>
-          <p>
+    <div className='flex text-center'>
+      <div className='flex translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
+        <div className='flex size-[30rem] items-center justify-center rounded-[50%] border-2 border-dashed border-primary-main '>
+          <Text
+            as='h3'
+            variant='title26'
+            strong={500}
+            align='center'
+          >
             데이터 활용의
             <br />
-            <strong className='text-[3.5rem] font-bold'>효율성과 정확성</strong>
+            <Text
+              as='span'
+              variant='title26'
+              strong={700}
+              align='center'
+            >
+              효율성과 정확성
+            </Text>
             <br />
             극대화
-          </p>
+          </Text>
         </div>
       </div>
-      <div className='flex size-[44.4rem] -translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 mix-blend-multiply'>
-        <div className='flex size-[40.8rem] items-center justify-center rounded-[50%] border-2 border-dotted border-primary-main'>
-          <p>
+      <div className='flex -translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
+        <div className='flex size-[30rem] items-center justify-center rounded-[50%] border-2 border-dashed border-primary-main '>
+          <Text
+            as='h3'
+            variant='title26'
+            strong={500}
+            align='center'
+          >
             최신 정보 기반의
             <br />
-            <strong className='text-[3.5rem] font-bold'>데이터 활용</strong>
+            <Text
+              as='span'
+              variant='title26'
+              strong={700}
+              align='center'
+            >
+              데이터 활용
+            </Text>
             <br />
-            <strong className='text-[3.5rem] font-bold'>전략 수립</strong>
-          </p>
+            <Text
+              as='span'
+              variant='title26'
+              strong={700}
+              align='center'
+            >
+              전략 수립
+            </Text>
+          </Text>
         </div>
       </div>
     </div>

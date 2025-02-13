@@ -14,7 +14,7 @@ const InfoItem = ({ title, description, isReverse }: Props) => {
         isReverse && 'flex-row-reverse text-right',
       )}
     >
-      <div className='flex flex-col gap-[7.3rem] self-end'>
+      <div className='flex flex-col gap-8 self-end'>
         <h3 className='title-28 font-bold leading-[3.3rem]'>{title}</h3>
         <p className='title-28 font-normal leading-[3.5rem]'>{description}</p>
       </div>
