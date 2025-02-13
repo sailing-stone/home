@@ -134,7 +134,7 @@ const ContactForm = () => {
             type='checkbox'
             id='동의'
             name='agree'
-            className='scale-150'
+            className='size-8'
           />
           <Input.Label
             variant='title16'
