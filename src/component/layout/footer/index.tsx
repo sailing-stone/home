@@ -21,7 +21,7 @@ const Footer = () => {
         </p>
         <p>
           | 사무실번호 : 02-2039-9268 <br className='hidden mobile:block' />|
-          이메일 : asdf@asdfasdfasdf.com
+          이메일 : dskang@sailingstone.io
         </p>
       </div>
     </footer>
