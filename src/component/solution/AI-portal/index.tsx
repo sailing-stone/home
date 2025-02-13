@@ -17,7 +17,7 @@ const AIPortal = () => {
     <section
       ref={ref}
       id='aiPortal'
-      className='mt-[13.3rem] flex flex-col items-center justify-center gap-20 pb-[21.9rem]'
+      className='flex flex-col items-center justify-center gap-20 pb-[21.9rem] pt-[13.3rem]'
     >
       <div>
         <Badge>
