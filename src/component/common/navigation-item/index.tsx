@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
 import Text from '@/component/base/text';
+import URL from '@/constant/url';
 import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
 
@@ -46,10 +47,14 @@ const NavigationItem = ({
     type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
 
+  const url = `${href}${hash ? `#${hash}` : ''}`;
+  const isRecruit = url === URL.RECRUIT;
+
   return (
     <li className='shrink-0'>
       <Link
-        to={{ pathname: href, hash }}
+        to={url}
+        target={isRecruit ? '_blank' : '_self'}
         onClick={handleNavigate}
       >
         <Text
