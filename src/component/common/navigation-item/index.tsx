@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
 import Text from '@/component/base/text';
 import URL from '@/constant/url';
@@ -16,6 +16,8 @@ interface Props {
   strong: number;
 }
 
+const HEADER_HEIGHT_PX = 140;
+
 const NavigationItem = ({
   type,
   hash,
@@ -26,16 +28,38 @@ const NavigationItem = ({
   variant,
   strong,
 }: Props) => {
+  const location = useLocation();
   const { handleSetNavigationItem } = useLocalNavigation();
   const { handleSetFalse } = useLNBToggle();
 
+  const url = `${href}${hash ? `#${hash}` : ''}`;
+  const isRecruit = url === URL.RECRUIT;
+
   const handleNavigate = () => {
+    const { pathname, hash: currentHash } = location;
+
     if (type === 'GNB') {
       handleSetNavigationItem('');
     }
 
     if (type === 'LNB') {
       handleSetNavigationItem(text);
+    }
+
+    if (url === `${pathname}${currentHash}`) {
+      const scrollTarget = document.querySelector(currentHash);
+
+      if (scrollTarget) {
+        setTimeout(() => {
+          const rect = scrollTarget.getBoundingClientRect();
+          const absoluteTop = rect.top + window.scrollY;
+
+          window.scrollTo({
+            top: absoluteTop - HEADER_HEIGHT_PX,
+            behavior: 'smooth',
+          });
+        }, 150);
+      }
     }
 
     handleSetFalse();
@@ -46,9 +70,6 @@ const NavigationItem = ({
     type === 'LNB' && isActive && 'text-primary-main',
     type === 'GNB' && isCurrentPath && 'text-primary-main',
   );
-
-  const url = `${href}${hash ? `#${hash}` : ''}`;
-  const isRecruit = url === URL.RECRUIT;
 
   return (
     <li className='shrink-0'>
