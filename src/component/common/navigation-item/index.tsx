@@ -56,7 +56,6 @@ const NavigationItem = ({
 
           window.scrollTo({
             top: absoluteTop - HEADER_HEIGHT_PX,
-            behavior: 'smooth',
           });
         }, 150);
       }
