@@ -16,6 +16,7 @@ const Banner = () => {
           pointerEvents: 'none',
         }}
       />
+      <div className='absolute inset-0 bg-black/70' />
       <div className='absolute bottom-16 flex flex-col gap-[4.5rem] px-40 mobile:bottom-[1.6rem] mobile:gap-8 mobile:px-[1.6rem] tablet:bottom-[2.4rem] tablet:gap-12 tablet:px-[2.4rem]'>
         <div>
           <Text

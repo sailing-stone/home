@@ -53,6 +53,7 @@ const Banner = () => {
           pointerEvents: 'none',
         }}
       />
+      <div className='absolute inset-0 bg-black/70' />
     </section>
   );
 };
