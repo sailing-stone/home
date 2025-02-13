@@ -20,7 +20,7 @@ const Footer = () => {
           두산더랜드 B동 1312호
         </p>
         <p>
-          | 사무실번호 : 02-2039-9268 <br className='hidden mobile:block' />|
+          | 사무실번호 : 02-2039-9268 <br className='hidden mobile:block' />
         </p>
       </div>
     </footer>
