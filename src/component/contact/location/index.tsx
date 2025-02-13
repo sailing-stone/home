@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Map from '@/asset/image/contact/map.png';
 import Badge from '@/component/base/badge';
 import Image from '@/component/base/Image';
@@ -26,12 +27,17 @@ const Location = () => {
         </Text>
       </Badge>
       <div className='flex gap-12 px-[2.4rem] mobile:flex-col tablet:gap-[2.4rem]'>
-        <Image
-          src={Map}
-          alt='세일링스톤 위치'
-          objectFit='cover'
-          className='h-[41rem] w-[54rem] mobile:size-[28.8rem] tablet:size-[34.8rem]'
-        />
+        <Link
+          to='https://map.naver.com/p/search/%EC%84%B8%EC%9D%BC%EB%A7%81%EC%8A%A4%ED%86%A4'
+          target='_blank'
+        >
+          <Image
+            src={Map}
+            alt='세일링스톤 위치'
+            objectFit='cover'
+            className='h-[41rem] w-[54rem] mobile:size-[28.8rem] tablet:size-[34.8rem]'
+          />
+        </Link>
         <div className='flex flex-col gap-32 self-end mobile:gap-12 mobile:self-start tablet:gap-20'>
           <div className='flex flex-col gap-8 mobile:gap-4 tablet:gap-4'>
             <Text
