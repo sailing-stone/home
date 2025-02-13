@@ -3,7 +3,7 @@ import Text from '@/component/base/text';
 const CircleInfo = () => {
   return (
     <div className='flex text-center'>
-      <div className='flex translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
+      <div className='flex translate-x-14 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
         <div className='flex size-[30rem] items-center justify-center rounded-[50%] border-2 border-dashed border-primary-main '>
           <Text
             as='h3'
@@ -26,7 +26,7 @@ const CircleInfo = () => {
           </Text>
         </div>
       </div>
-      <div className='flex -translate-x-20 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
+      <div className='flex -translate-x-14 items-center justify-center rounded-[50%] bg-primary-100 p-8 mix-blend-multiply'>
         <div className='flex size-[30rem] items-center justify-center rounded-[50%] border-2 border-dashed border-primary-main '>
           <Text
             as='h3'
