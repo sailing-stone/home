@@ -11,7 +11,7 @@ const Footer = () => {
       <div className='title-16 font-medium leading-[2.4rem] text-text-footer mobile:leading-[2.1rem] tablet:leading-[2.1rem]'>
         <p>(주) 세일링스톤 </p>
         <p>
-          | 사업자등록번호 : 873-870-1280 <br className='hidden mobile:block' />
+          | 사업자등록번호 : 873-87-01280 <br className='hidden mobile:block' />
           | 대표 이사 및 개인정보책임자: 강동석, 김봉군
         </p>
         <p>
@@ -21,7 +21,6 @@ const Footer = () => {
         </p>
         <p>
           | 사무실번호 : 02-2039-9268 <br className='hidden mobile:block' />|
-          이메일 : dskang@sailingstone.io
         </p>
       </div>
     </footer>
