@@ -1,5 +1,4 @@
 import { ComponentProps } from 'react';
-import PlaceholderImage from '@/asset/image/logo.png';
 import useLazyLoading from './useLazyLoading';
 
 type ObjectFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
@@ -21,7 +20,7 @@ const Image = ({
   width,
   height,
   lazy = true,
-  placeholder = PlaceholderImage,
+  placeholder,
   threshold = 0.1,
   src,
   alt,
@@ -44,7 +43,7 @@ const Image = ({
 
   if (isDevelopment) {
     convertedPlaceholder = placeholder;
-  } else if (placeholder.endsWith('.png')) {
+  } else if (placeholder && placeholder.endsWith('.png')) {
     convertedPlaceholder = `${placeholder}.webp`;
   } else {
     convertedPlaceholder = placeholder;
