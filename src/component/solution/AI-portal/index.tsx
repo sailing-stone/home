@@ -2,6 +2,7 @@ import Badge from '@/component/base/badge';
 import Text from '@/component/base/text';
 import ArrowDown from '@/component/common/icon/arrow-down.svg?react';
 import VisibleGuard from '@/component/common/visible-guard';
+import useIntersectingNavigation from '@/hook/useIntersectingNavigation';
 import useResponsive from '@/hook/useResponsive';
 import CircleInfo from './circle-info';
 import InfoList from './info-list';
@@ -10,9 +11,11 @@ import StickInfo from './stick-info';
 
 const AIPortal = () => {
   const isMatch = useResponsive();
+  const ref = useIntersectingNavigation('데이터 AI 포털');
 
   return (
     <section
+      ref={ref}
       id='aiPortal'
       className='mt-[13.3rem] flex flex-col items-center justify-center gap-20 pb-[21.9rem]'
     >
