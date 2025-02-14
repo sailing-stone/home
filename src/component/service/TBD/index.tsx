@@ -23,8 +23,7 @@ const TBD = () => {
             align='center'
             className='text-common-white'
           >
-            Tableau Expertise
-            <br className='hidden mobile:block' />
+            Tableau Expertise <br className='hidden mobile:block' />
             Service
           </Text>
         </Badge>
