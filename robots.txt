@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://new.sailingstone.io/sitemap.xml
