@@ -9,7 +9,7 @@ import { LocalNavigationProvider } from './context/local-navigation-context';
 
 const App = () => {
   return (
-    <div className='size-full'>
+    <div className='flex size-full flex-col'>
       <ScrollToTop />
       <LocalNavigationProvider>
         <LNBToggleProvider>

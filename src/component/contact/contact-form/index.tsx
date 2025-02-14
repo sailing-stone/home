@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useMemo, useState } from 'react';
 import Input from '@/component/base/input';
 import Select from '@/component/base/select';
 import Text from '@/component/base/text';
@@ -33,19 +33,31 @@ const postContact = async (formData: Contact) => {
   return response.json();
 };
 
-const OPTIONS = [
+const TABLEAU_OPTIONS = [
   '컨설팅 및 개발 문의',
+  '생성형 AI 기반 BI 문의',
   '기술 지원 문의',
-  '견적 문의',
-  'Tableau 교육 문의',
+  '교육 문의',
+  '기타',
+];
+
+const SOLUTION_OPTIONS = [
+  '솔루션 기능 문의',
+  '솔루션 견적',
+  'Demo 시연 요청',
   '기타',
 ];
 
 const ContactForm = () => {
   const ref = useIntersectingNavigation('문의하기');
-  const [, setType] = useState('태블로 서비스');
-  const [category, setCategory] = useState<string>(OPTIONS[0]);
+  const [type, setType] = useState('태블로 서비스');
+  const [category, setCategory] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+
+  const options = useMemo(
+    () => (type === '태블로 서비스' ? TABLEAU_OPTIONS : SOLUTION_OPTIONS),
+    [type],
+  );
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     const { currentTarget } = event;
@@ -62,15 +74,7 @@ const ContactForm = () => {
     const content = formData.get('content') as string;
     const isAgree = formData.get('agree') as string;
 
-    if (
-      !company ||
-      !name ||
-      !contact ||
-      !email ||
-      !category ||
-      !content ||
-      !isAgree
-    ) {
+    if (!company || !name || !contact || !email || !content || !isAgree) {
       return;
     }
 
@@ -78,7 +82,7 @@ const ContactForm = () => {
 
     try {
       await postContact({
-        category,
+        category: !category ? options[0] : category,
         company_name: company,
         content,
         department_name: department,
@@ -202,7 +206,8 @@ const ContactForm = () => {
             문의 구분
           </Input.Label>
           <Select
-            options={OPTIONS}
+            key={type}
+            options={options}
             onChange={(option) => setCategory(option as string)}
           />
         </Input.Wrapper>
@@ -267,22 +272,33 @@ const ContactForm = () => {
               이용되는지 알려 드립니다. 내용을 읽어보시고 동의 여부를 결정하시기
               바랍니다.
             </Text>
-
             <Text
               as='p'
               variant='title16'
               font={400}
             >
-              1. 개인정보 수집항목 - 필수정보 : 회사명, 이름, 연락처, 이메일
-              <br />- 선택정보 : 부서명, 직급
+              1. 개인정보 수집항목
+              <br />- 필수정보 : 회사명, 이름, 부서명, 직급, 연락처, 이메일
             </Text>
             <Text
               as='p'
               variant='title16'
               font={400}
             >
-              2. 개인정보 수집목적 - 고객 문의접수 및 결과 회신
+              2. 개인정보 수집목적
+              <br />- 고객 문의접수 및 결과 회신
               <br />- 주식회사 세일링스톤 정보 이메일 발신
+            </Text>
+            <Text
+              as='p'
+              variant='title16'
+              font={400}
+            >
+              3. 개인정보 보유 및 이용기간
+              <br />- 문의상에 작성하신 개인정보는 원활한 업무를 위해 1년간
+              보관됩니다.
+              <br /> - 단, 법률에 의해 보존의무가 있는 경우에는 법령이 지정한
+              일정기간 동안 보존합니다.
             </Text>
           </div>
         </div>

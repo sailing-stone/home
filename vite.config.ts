@@ -16,6 +16,17 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            const module = id.split('node_modules/').pop()?.split('/')[0];
+
+            return module ? `vendor/${module}` : undefined;
+          }
+        },
+      },
+    },
   },
   plugins: [
     react(),
@@ -52,6 +63,13 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
+  // server: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://192.168.0.5:29080',
+  //     },
+  //   },
+  // },
   // server: {
   //   host: '0.0.0.0',
   // },

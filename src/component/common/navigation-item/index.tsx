@@ -1,6 +1,9 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Link, useLocation } from 'react-router-dom';
 import { twJoin } from 'tailwind-merge';
 import Text from '@/component/base/text';
+import LAZY_PAGE from '@/constant/lazy-page';
 import URL from '@/constant/url';
 import { useLNBToggle } from '@/context/lnb-toggle-context';
 import { useLocalNavigation } from '@/context/local-navigation-context';
@@ -31,6 +34,17 @@ const NavigationItem = ({
   const location = useLocation();
   const { handleSetNavigationItem } = useLocalNavigation();
   const { handleSetFalse } = useLNBToggle();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView && LAZY_PAGE[href]) {
+      const LazyComponent = LAZY_PAGE[href]();
+
+      LazyComponent.then((module) => module.default);
+    }
+  }, [href, inView]);
 
   const url = `${href}${hash ? `#${hash}` : ''}`;
   const isRecruit = url === URL.RECRUIT;
@@ -71,7 +85,10 @@ const NavigationItem = ({
   );
 
   return (
-    <li className='shrink-0'>
+    <li
+      ref={ref}
+      className='shrink-0'
+    >
       <Link
         to={url}
         target={isRecruit ? '_blank' : '_self'}
