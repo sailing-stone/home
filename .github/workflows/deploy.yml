@@ -24,8 +24,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Copy environment file
-        run: cp .env /home/sstone/sailingstone/
+      - name: .env setting
+        run: |
+          echo "VITE_API_BASE_URL=${{ secrets.VITE_API_BASE_URL }}" >> .env
+          echo "VITE_DEPLOY_URL=${{ secrets.VITE_DEPLOY_URL }}" >> .env
 
       - name: Build
         run: |
