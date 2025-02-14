@@ -2,13 +2,16 @@ import { useState } from 'react';
 import { twJoin } from 'tailwind-merge';
 import Text from '@/component/base/text';
 
-const ContactTypeButtons = () => {
-  const [category, setCategory] = useState<'태블로 서비스' | '솔루션'>(
-    '태블로 서비스',
-  );
+interface Props {
+  onChange: (newType: string) => void;
+}
 
-  const handleChangeCategory = (newCategory: '태블로 서비스' | '솔루션') => {
-    setCategory(newCategory);
+const ContactTypeButtons = ({ onChange }: Props) => {
+  const [type, setType] = useState<'태블로 서비스' | '솔루션'>('태블로 서비스');
+
+  const handleChangeType = (newType: '태블로 서비스' | '솔루션') => {
+    setType(newType);
+    onChange(newType);
   };
 
   return (
@@ -17,11 +20,11 @@ const ContactTypeButtons = () => {
         type='button'
         className={twJoin(
           'shrink-0 rounded-[2.8rem] px-[10.6rem] py-6 shadow-button tablet:px-[11.7rem] mobile:py-[1rem] mobile:px-[3.7rem]',
-          category === '태블로 서비스'
+          type === '태블로 서비스'
             ? 'bg-primary-main'
             : 'border border-primary-main',
         )}
-        onClick={() => handleChangeCategory('태블로 서비스')}
+        onClick={() => handleChangeType('태블로 서비스')}
       >
         <Text
           as='p'
@@ -35,11 +38,9 @@ const ContactTypeButtons = () => {
         type='button'
         className={twJoin(
           'shrink-0 rounded-[2.8rem] px-[13.2rem] py-6 shadow-button tablet:px-[13.7rem] mobile:py-[1rem] mobile:px-[5.4rem]',
-          category === '솔루션'
-            ? 'bg-primary-main'
-            : 'border border-primary-main',
+          type === '솔루션' ? 'bg-primary-main' : 'border border-primary-main',
         )}
-        onClick={() => handleChangeCategory('솔루션')}
+        onClick={() => handleChangeType('솔루션')}
       >
         <Text
           as='p'
