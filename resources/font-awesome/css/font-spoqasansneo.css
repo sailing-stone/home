@@ -1,0 +1,9 @@
+@charset "EUC-KR";
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.otf');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
