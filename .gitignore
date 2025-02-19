@@ -3,3 +3,4 @@ node_modules
 .husky
 dist
 .eslintcache
+.DS_Store
