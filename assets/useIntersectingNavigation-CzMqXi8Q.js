@@ -1,1 +1,0 @@
-import{r as s}from"./vendor/react-BXtthtrb.js";import{u as i}from"./vendor/react-intersection-observer-8pwKJmAy.js";import{c as a}from"./index-DOLTz21B.js";const u=e=>{const{handleSetNavigationItem:t}=a(),{ref:o,inView:r}=i({threshold:.3,triggerOnce:!1});return s.useEffect(()=>{r&&t(e)},[r,t,e]),o};export{u};
